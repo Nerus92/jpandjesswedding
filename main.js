@@ -1,6 +1,5 @@
 "use strict";
 /* Countdown */
-Object.defineProperty(exports, "__esModule", { value: true });
 const wedding_date = new Date("2025-06-13T18:00:00+02:00");
 function updateCountdown() {
     const now = new Date().getTime();

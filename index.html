@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JP and Jess' Wedding</title>
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Countdown Banner -->
+    <div class="w-full p-2 fixed top-0 bg-white z-50" id="countdown-banner">
+        <p class="text-center text-sm" id="countdown"></p>
+        <p class="text-center uppercase text-sm">To Go!</p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="relative z-40 sticky top-14">
+        <div class="flex flex-row justify-around w-full uppercase py-4 bg-black text-white items-center" id="navbar">
+            <div class="absolute bottom-0 h-2 bg-white transition-all duration-300" id="nav-indicator"></div>
+            <a href="#our-story" class="hover:font-bold transition-all">Our story</a>
+            <a href="#theme" class="hover:font-bold transition-all">Theme</a>
+            <a href="#wedding-party" class="hover:font-bold transition-all">Wedding party</a>
+            <a href="#venue" class="hover:font-bold transition-all">Venue</a>
+
+            <img src="./assets/couple.png" alt="couple" class="couple h-16 w-16 rounded-full p-2">
+
+            <a href="#schedule" class="hover:font-bold transition-all">Schedule</a>
+            <a href="#guest-info" class="hover:font-bold transition-all">Guest info</a>
+            <a href="#faq" class="hover:font-bold transition-all">FAQ</a>
+            <a href="https://google.com" target="_blank" class="hover:font-bold hover:bg-white hover:bg-opacity-30 transition-all border border-white rounded-full px-8 py-2">RSVP</a>
+        </div>
+        <!-- Add blur gradient -->
+        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-black to-transparent -mb-32"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto">
+        <!-- Our Story Section -->
+        <section id="our-story" class="min-h-screen py-56">
+            <h2 class="text-3xl font-bold mb-8 text-center">Our Story</h2>
+            <!-- Add content here -->
+        </section>
+
+        <!-- Theme Section -->
+        <section id="theme" class="min-h-screen py-56">
+            <h2 class="text-3xl font-bold mb-8 text-center">Theme</h2>
+            <!-- Add content here -->
+        </section>
+
+        <!-- Wedding Party Section -->
+        <section id="wedding-party" class="min-h-screen py-56">
+            <h2 class="text-3xl font-bold mb-8 text-center">Wedding Party</h2>
+            <!-- Add content here -->
+        </section>
+
+        <!-- Venue Section -->
+        <section id="venue" class="min-h-screen py-56">
+            <h2 class="text-3xl font-bold mb-8 text-center">Venue</h2>
+            <!-- Add content here -->
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule" class="min-h-screen py-56">
+            <h2 class="text-3xl font-bold mb-8 text-center">Schedule</h2>
+            <!-- Add content here -->
+        </section>
+
+        <!-- Guest Info Section -->
+        <section id="guest-info" class="min-h-screen py-56">
+            <h2 class="text-3xl font-bold mb-8 text-center">Guest Information</h2>
+            <!-- Add content here -->
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="min-h-screen py-56">
+            <h2 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+            <!-- Add content here -->
+        </section>
+    </main>
+    
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
