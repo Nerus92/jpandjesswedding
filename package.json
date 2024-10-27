@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc && tailwindcss -i ./src/styles.css -o ./dist/styles.css && npm run copy-assets",
     "watch": "concurrently \"tsc --watch\" \"tailwindcss -i ./src/styles.css -o ./dist/styles.css --watch\" \"npm run copy-assets -- --watch\"",
-    "dev": "concurrently \"npm run watch\" \"live-server --port=3000\"",
-    "copy-assets": "copyfiles -u 1 src/assets/* dist/"
+    "dev": "concurrently \"npm run watch\" \"live-server --port=3000 dist/\"",
+    "copy-assets": "copyfiles -u 1 \"src/**/*.html\" src/assets/* dist/"
   },
   "keywords": [],
   "author": "",
