@@ -1,4 +1,3 @@
-
 /* Countdown */
 
 const wedding_date = new Date("2025-06-13T18:00:00+02:00");
@@ -82,3 +81,35 @@ window.addEventListener('scroll', updateActiveLink);
 
 // Run once on page load
 updateActiveLink();
+
+/* RSVP Modal */
+const rsvpButton = document.getElementById('rsvp-button');
+const rsvpModal = document.getElementById('rsvp-modal');
+const waitButton = document.getElementById('wait-button');
+const readyButton = document.getElementById('ready-button');
+
+const RSVP_URL = 'https://jessica-and-jean-philippe.thatstheone.com/rsvp';
+
+rsvpButton?.addEventListener('click', (e) => {
+    e.preventDefault();
+    rsvpModal?.classList.remove('hidden');
+    // Small delay to ensure the display: none is removed before starting the fade
+    requestAnimationFrame(() => {
+        rsvpModal?.classList.add('visible');
+    });
+});
+
+waitButton?.addEventListener('click', () => {
+    rsvpModal?.classList.remove('visible');
+    // Wait for fade out animation to complete before hiding
+    setTimeout(() => {
+        rsvpModal?.classList.add('hidden');
+    }, 300); // Match this with the CSS transition duration (0.3s = 300ms)
+});
+
+readyButton?.addEventListener('click', () => {
+    rsvpModal?.classList.remove('visible');
+    setTimeout(() => {
+        window.open(RSVP_URL, '_blank'); // This will open in a new tab
+    }, 300);
+});

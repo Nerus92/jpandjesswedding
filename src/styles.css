@@ -16,10 +16,62 @@ body, html {
     background-color: #242961;
 }
 
+a {
+    position: relative;
+}
+
+a::after {
+    content: attr(data-text);
+    content: attr(data-text) / "";
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    user-select: none;
+    pointer-events: none;
+    font-weight: bold;
+    position: absolute;
+    white-space: nowrap;
+    width: 0;
+}
+
 a.selected {
     font-weight: bold;
+    transition: font-weight 0.3s ease;
 }
 
 .couple {
     box-shadow: 0 0 30px white;
+}
+
+/* Add these styles at the end of the file */
+
+#rsvp-modal {
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 0.05em;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#rsvp-modal.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#rsvp-modal p {
+    font-size: 0.9rem;
+    max-width: 650px;
+    line-height: 1.6;
+}
+
+#rsvp-modal button {
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    color: rgb(164, 130, 112);
+    border-color: rgb(164, 130, 112);
+}
+
+#rsvp-modal button:hover {
+    background-color: rgb(164, 130, 112);
+    color: white;
 }
