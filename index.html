@@ -17,17 +17,17 @@
     <div class="relative z-40 sticky top-14">
         <div class="flex flex-row justify-around w-full uppercase py-4 bg-black text-white items-center" id="navbar">
             <div class="absolute bottom-0 h-2 bg-white transition-all duration-300" id="nav-indicator"></div>
-            <a href="#our-story" class="hover:font-bold transition-all">Our story</a>
-            <a href="#theme" class="hover:font-bold transition-all">Theme</a>
-            <a href="#wedding-party" class="hover:font-bold transition-all">Wedding party</a>
-            <a href="#venue" class="hover:font-bold transition-all">Venue</a>
+            <a href="#our-story" data-text="Our story">Our story</a>
+            <a href="#theme" data-text="Theme">Theme</a>
+            <a href="#wedding-party" data-text="Wedding party">Wedding party</a>
+            <a href="#venue" data-text="Venue">Venue</a>
 
             <img src="./assets/couple.png" alt="couple" class="couple h-16 w-16 rounded-full p-2">
 
-            <a href="#schedule" class="hover:font-bold transition-all">Schedule</a>
-            <a href="#guest-info" class="hover:font-bold transition-all">Guest info</a>
-            <a href="#faq" class="hover:font-bold transition-all">FAQ</a>
-            <a href="https://google.com" target="_blank" class="hover:font-bold hover:bg-white hover:bg-opacity-30 transition-all border border-white rounded-full px-8 py-2">RSVP</a>
+            <a href="#schedule" data-text="Schedule">Schedule</a>
+            <a href="#guest-info" data-text="Guest info">Guest info</a>
+            <a href="#faq" data-text="FAQ">FAQ</a>
+            <a href="#" id="rsvp-button" class="hover:font-bold hover:bg-white hover:bg-opacity-30 transition-all border border-white rounded-full px-8 py-2">RSVP</a>
         </div>
         <!-- Add blur gradient -->
         <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-black to-transparent -mb-32"></div>
@@ -79,5 +79,23 @@
     </main>
     
     <script type="module" src="./main.js"></script>
+
+    <!-- Add this right before the closing body tag -->
+    <div id="rsvp-modal" class="fixed inset-0 bg-black z-50 hidden">
+        <div class="flex flex-col items-center justify-center h-full space-y-4 p-4">
+            <p class="text-center">YOU'RE BEING REROUTED AWAY FROM THIS SITE...</p>
+            <p class="text-center">YOUR BROWSER IS GOING TO GO FROM A BLACK BACKGROUND TO A WHITE ONE.</p>
+            <p class="text-center">SHIELD YOUR EYES. YOU'VE BEEN WARNED ;)</p>
+            
+            <div class="flex space-x-4 mt-8">
+                <button id="wait-button" class="px-8 py-2 border rounded-full transition-all">
+                    WAIT! NO!
+                </button>
+                <button id="ready-button" class="px-8 py-2 border rounded-full transition-all">
+                    I'M READY
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
