@@ -9,7 +9,7 @@ html {
 body, html {
     background-color: black;
     color: white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat";
 }
 
 #countdown-banner {
@@ -20,23 +20,9 @@ a {
     position: relative;
 }
 
-a::after {
-    content: attr(data-text);
-    content: attr(data-text) / "";
-    height: 0;
-    visibility: hidden;
-    overflow: hidden;
-    user-select: none;
-    pointer-events: none;
-    font-weight: bold;
-    position: absolute;
-    white-space: nowrap;
-    width: 0;
-}
-
 a.selected {
-    font-weight: bold;
-    transition: font-weight 0.3s ease;
+    transform: scale(1.1);
+    transition: all .3s ease;
 }
 
 .couple {
@@ -46,7 +32,6 @@ a.selected {
 /* Add these styles at the end of the file */
 
 #rsvp-modal {
-    font-family: 'Arial', sans-serif;
     letter-spacing: 0.05em;
     opacity: 0;
     visibility: hidden;
@@ -74,4 +59,65 @@ a.selected {
 #rsvp-modal button:hover {
     background-color: rgb(164, 130, 112);
     color: white;
+}
+
+/* Add these styles after your existing CSS */
+
+/* Import a cursive font for the venue name */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.font-cursive {
+    font-family: "Amsterdam Four_ttf";
+}
+
+.font-nats {
+    font-family: "NATS";
+}
+
+/* Add styles for the nebula background */
+.bg-nebula {
+    background-image: url('./assets/nebula-bg.png');
+    mix-blend-mode: screen;
+}
+
+/* Adjust the Our Story section */
+#our-story {
+    background-color: black;
+}
+
+#our-story .container {
+    max-width: 1400px;
+}
+
+/* Add smooth transitions */
+#our-story img {
+    transition: all 0.3s ease-in-out;
+}
+
+#our-story img:hover {
+    transform: scale(1.02);
+}
+
+@keyframes open-menu {
+    0% {
+      transform: scaleY(0);
+    }
+  
+    100% {
+      transform: scaleY(1);
+    }
+}
+
+.animate-open-menu {
+    animation: open-menu 0.5s ease-in-out forwards;
+}
+
+@layer utilities {
+    .section-min-height {
+        min-height: calc(100vh - 68px)
+    }
+
+    .toggle-btn {
+        @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent [&>div]:rotate-[720deg]
+    }
 }

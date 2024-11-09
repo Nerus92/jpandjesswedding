@@ -40,11 +40,6 @@ const updateActiveLink = () => {
 
         if (scrollPosition >= sectionTop - sectionHeight/2 && 
             scrollPosition < sectionTop + sectionHeight/2) {
-            
-            // Remove active class from all links
-            navLinks.forEach(link => {
-                link.classList.remove('selected');
-            });
 
             // Add active class to current section's link
             const correspondingLink = document.querySelector(
@@ -58,6 +53,13 @@ const updateActiveLink = () => {
                 indicator.style.left = `${linkRect.left}px`;
                 
                 correspondingLink.classList.add('selected'); // Keep any other active states you want
+
+                // Remove active class from all links
+                navLinks.forEach(link => {
+                    if (link !== correspondingLink) {
+                        link.classList.remove('selected');
+                    }
+                });
             }
         }
     });
@@ -113,3 +115,19 @@ readyButton?.addEventListener('click', () => {
         window.open(RSVP_URL, '_blank'); // This will open in a new tab
     }, 300);
 });
+
+const initApp = () => {
+    const hamburgerBtn = document.getElementById('hamburger-button')
+    const mobileMenu = document.getElementById('mobile-menu')
+
+    const toggleMenu = () => {
+        mobileMenu.classList.toggle('hidden')
+        mobileMenu.classList.toggle('flex')
+        hamburgerBtn.classList.toggle('toggle-btn')
+    }
+
+    hamburgerBtn.addEventListener('click', toggleMenu)
+    mobileMenu.addEventListener('click', toggleMenu)
+}
+
+document.addEventListener('DOMContentLoaded', initApp)
