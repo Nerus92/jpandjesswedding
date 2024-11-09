@@ -4,77 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JP and Jess' Wedding</title>
+    <link href="https://db.onlinewebfonts.com/c/07cb29fdcb073fff840edc6de2067b50?family=Amsterdam+Four_ttf" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/9abbc37dd4a3bcf3c602bb64d2d30a72?family=NATS" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/5fc6f4fd75e944a52a342ab2c7f100f1?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link href="./styles.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Countdown Banner -->
-    <div class="w-full p-2 fixed top-0 bg-white z-50" id="countdown-banner">
-        <p class="text-center text-sm" id="countdown"></p>
-        <p class="text-center uppercase text-sm">To Go!</p>
-    </div>
-
-    <!-- Navigation -->
-    <div class="relative z-40 sticky top-14">
-        <div class="flex flex-row justify-around w-full uppercase py-4 bg-black text-white items-center" id="navbar">
-            <div class="absolute bottom-0 h-2 bg-white transition-all duration-300" id="nav-indicator"></div>
-            <a href="#our-story" data-text="Our story">Our story</a>
-            <a href="#theme" data-text="Theme">Theme</a>
-            <a href="#wedding-party" data-text="Wedding party">Wedding party</a>
-            <a href="#venue" data-text="Venue">Venue</a>
-
-            <img src="./assets/couple.png" alt="couple" class="couple h-16 w-16 rounded-full p-2">
-
-            <a href="#schedule" data-text="Schedule">Schedule</a>
-            <a href="#guest-info" data-text="Guest info">Guest info</a>
-            <a href="#faq" data-text="FAQ">FAQ</a>
-            <a href="#" id="rsvp-button" class="hover:font-bold hover:bg-white hover:bg-opacity-30 transition-all border border-white rounded-full px-8 py-2">RSVP</a>
+    <div class="sticky top-0 z-40 text-white bg-black">
+        <div class="w-full p-2 top-0 bg-white z-50" id="countdown-banner">
+            <p class="text-center font-nats text-sm font-bold" id="countdown"></p>
+            <p class="text-center uppercase font-nats text-sm font-bold">To Go!</p>
         </div>
-        <!-- Add blur gradient -->
-        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-black to-transparent -mb-32"></div>
+        <section class="flex w-full items-center justify-end px-6 py-4">
+            <button id="hamburger-button" class="relative h-8 w-8 cursor-pointer text-3xl md:hidden">
+                <div
+                    class="absolute top-4 -mt-0.5 h-1 w-8 rounded bg-white transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-white before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-white after:transition-all after:duration-500 after:content-['']">
+                </div>
+            </button>
+            <nav class="hidden md:flex flex-row justify-around w-full uppercase py-4 bg-black text-white items-center" aria-label="main" id="navbar">
+                <div class="absolute bottom-0 h-2 bg-white transition-all ease-linear" id="nav-indicator"></div>
+                <a href="#our-story">Our story</a>
+                <a href="#theme">Theme</a>
+                <a href="#wedding-party">Wedding party</a>
+                <a href="#venue">Venue</a>
+    
+                <img src="./assets/couple.png" alt="couple" class="couple h-16 w-16 rounded-full p-2">
+    
+                <a href="#schedule">Schedule</a>
+                <a href="#guest-info">Guest info</a>
+                <a href="#faq">FAQ</a>
+                <a href="#" id="rsvp-button" class="hover:font-bold hover:bg-white hover:bg-opacity-30 transition-all border border-white rounded-full px-8 py-2">RSVP</a>
+            </nav>
+            <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-black to-transparent -mb-32"></div>
+        </section>
+        <section id="mobile-menu"
+            class="justify-center absolute hidden w-full origin-top animate-open-menu flex-col bg-black text-3xl">
+            <!-- <button class="text-8xl self-end px-6">
+                        &times;
+                    </button> -->
+            <nav class="flex min-h-screen flex-col items-center gap-8 mt-12" aria-label="mobile">
+                <a href="#our-story">Our story</a>
+                <a href="#theme">Theme</a>
+                <a href="#wedding-party">Wedding party</a>
+                <a href="#venue">Venue</a>
+                <a href="#schedule">Schedule</a>
+                <a href="#guest-info">Guest info</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+        </section>
     </div>
 
-    <!-- Main Content -->
-    <main class="container mx-auto">
-        <!-- Our Story Section -->
-        <section id="our-story" class="min-h-screen py-56">
-            <h2 class="text-3xl font-bold mb-8 text-center">Our Story</h2>
-            <!-- Add content here -->
+    <main class="container mx-auto pt-32">
+        <section id="our-story" class="h-screen w-full relative">
+            <div class="flex flex-col w-2/3 items-center">
+                <div class="font-nats tracking-widest text-[11rem] text-gray-300 opacity-50">
+                    06.13.2025
+                </div>
+                <div class="text-9xl font-nats tracking-wide -mt-36 z-10">
+                    JESS + JP
+                </div>
+                <div class="font-cursive mt-32 text-5xl">
+                    Château de la Napoule
+                </div>
+                <div class="mt-8 text-center font-thin">
+                    Av. Henry Clews, 06210<br>
+                    Mandelieu-la-Napoule, France
+                </div>
+            </div>
+            
+            <div class="absolute right-0 bottom-36 w-[600px] h-[600px]">
+                <img 
+                    src="./assets/couple-photo.png" 
+                    alt="Couple" 
+                    class="absolute object-cover z-10"
+                >
+                <img 
+                    src="./assets/nebula-bg.png" 
+                    alt="nebula" 
+                    class="absolute z-0"
+                >
+            </div>
         </section>
 
-        <!-- Theme Section -->
         <section id="theme" class="min-h-screen py-56">
             <h2 class="text-3xl font-bold mb-8 text-center">Theme</h2>
-            <!-- Add content here -->
         </section>
 
-        <!-- Wedding Party Section -->
         <section id="wedding-party" class="min-h-screen py-56">
             <h2 class="text-3xl font-bold mb-8 text-center">Wedding Party</h2>
-            <!-- Add content here -->
         </section>
 
-        <!-- Venue Section -->
         <section id="venue" class="min-h-screen py-56">
             <h2 class="text-3xl font-bold mb-8 text-center">Venue</h2>
-            <!-- Add content here -->
         </section>
 
-        <!-- Schedule Section -->
         <section id="schedule" class="min-h-screen py-56">
             <h2 class="text-3xl font-bold mb-8 text-center">Schedule</h2>
-            <!-- Add content here -->
         </section>
 
-        <!-- Guest Info Section -->
         <section id="guest-info" class="min-h-screen py-56">
             <h2 class="text-3xl font-bold mb-8 text-center">Guest Information</h2>
-            <!-- Add content here -->
         </section>
 
-        <!-- FAQ Section -->
         <section id="faq" class="min-h-screen py-56">
             <h2 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
-            <!-- Add content here -->
         </section>
     </main>
     
