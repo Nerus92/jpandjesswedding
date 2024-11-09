@@ -10,6 +10,7 @@ body, html {
     background-color: black;
     color: white;
     font-family: "Montserrat";
+    width: 100%;
 }
 
 #countdown-banner {
