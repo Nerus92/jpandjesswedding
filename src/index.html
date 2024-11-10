@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link href="./styles.css" rel="stylesheet">
 </head>
-<body class="w-full flex flex-col">
+<body class="w-full flex flex-col gap-16">
     <div class="fixed top-0 z-40 text-white bg-black w-full">
         <div class="w-full p-2 top-0 z-50" id="countdown-banner">
             <p class="text-center font-nats text-sm font-bold" id="countdown"></p>
@@ -52,7 +52,7 @@
         </section>
     </div>
 
-    <section id="our-story" class="h-screen w-full pt-[40%] md:pt-56">
+    <section id="our-story" class="min-h-screen w-full pt-[40%] md:pt-56 flex flex-col items-center">
         <div class="flex flex-col h-full w-full md:w-2/3 items-center">
             <div class="font-nats tracking-widest text-7xl md:text-[11rem] text-gray-300 opacity-50">
                 06.13.2025
@@ -79,14 +79,153 @@
             alt="nebula" 
             class="absolute bottom-0 right-0 z-0"
         >
+
+        <h2 class="font-nats uppercase self-center mt-96 pt-96 text-4xl md:text-8xl">Our Story</h2>
+        <h3 class="font-cursive self-center text-2xl md:text-6xl">the artist & the engineer</h3>
+
     </section>
 
-    <section id="theme" class="min-h-screen py-56">
-        <h2 class="text-3xl font-bold mb-8 text-center">Theme</h2>
+    <section id="theme" class="min-h-screen flex flex-col items-center">
+        <h2 class="font-nats uppercase text-4xl md:text-8xl text-center align-baseline">We are all <span class="font-cursive lowercase align-baseline">stardust</span></h2>
+        <h3 class="font-cursive self-center text-2xl md:text-6xl text-center">one part science. one part magic.</h3>
+        <h4 class="text-lg md:text-2xl uppercase mt-16 mb-6">Intro</h4>
+        <div class="text-center px-8 text-sm md:text-lg md:max-w-[66%]">"We Are All Stardust," reflects the wonder of our cosmic origins and the extraordinary chance that brought us together. Each of us is made from the same stardust—atoms that have journeyed through the universe for billions of years that were forged from ancient stars. This profound connection highlights the remarkable way our individual paths have aligned to create this special moment.</div>
+        <h4 class="text-lg md:text-2xl uppercase mt-6 mb-6">His connection</h4>
+        <div class="text-center px-8 text-sm md:text-lg md:max-w-[66%]">Looking back, it's awe-inspiring to consider the scientific marvel of how our lives intersected. Out of the infinite possibilities of how our atoms could have come together, the universe orchestrated our meeting in a way that feels both miraculous and deeply significant. The alignment of our stories is a beautiful testament to the randomness and beauty of cosmic chance.</div>
+        <h4 class="text-lg md:text-2xl uppercase mt-6 mb-6">Her connection</h4>
+        <div class="text-center px-8 text-sm md:text-lg md:max-w-[66%]">As we celebrate with our loved ones, we are reminded of how our unique journeys have intertwined. The presence of family and friends adds depth to our celebration, illustrating how each person's path has contributed to our shared story. This day is a tribute not only to our love but also to the meaningful connections that have shaped our lives.</div>
+        <h4 class="text-lg md:text-2xl uppercase mt-6 mb-6">Family link</h4>
+        <div class="text-center px-8 text-sm md:text-lg md:max-w-[66%]">The theme "We Are All Stardust" underscores the joy of sharing this milestone with those who have been part of our journey. It's a celebration of how the universe, with its boundless possibilities, has brought us together and gathered our loved ones for this occasion. The convergence of our stardust and the collective presence of our cherished guests highlight the wonder of this moment.</div>
+        <h4 class="text-lg md:text-2xl uppercase mt-6 mb-6">Excitement, close, sharing with you</h4>
+        <div class="text-center px-8 text-sm md:text-lg md:max-w-[66%]">As we embark on this new chapter, we are grateful for the cosmic forces that led us to each other. Our wedding is a celebration of the miraculous alignment of our lives and the excitement of starting our future surrounded by the people we hold dear. It's a reminder of the extraordinary nature of our connection and the joy of sharing it with all of you.</div>
     </section>
 
-    <section id="wedding-party" class="min-h-screen py-56">
-        <h2 class="text-3xl font-bold mb-8 text-center">Wedding Party</h2>
+    <section id="wedding-party" class="min-h-screen flex flex-col items-center gap-6 md:gap-16">
+        <h2 class="font-nats uppercase self-center text-4xl md:text-8xl">Meet the Wedding Party</h2>
+        <h3 class="font-cursive self-center text-2xl md:text-6xl mb-12">We love our crew. We think you will too!</h3>
+
+        <div class="wedding-party-members flex flex-col items-center md:grid md:grid-cols-2 md:gap-8 md:max-w-[80%]">
+            <div class="wedding-party-member h-full md:grid md:grid-auto-rows md:grid-flow-col">
+                <div class="wedding-party-member-name uppercase text-xl font-bold text-center md:text-right">
+                    Brooklynn
+                </div>
+                <div class="wedding-party-member-role uppercase text-md text-center md:text-right">
+                    Matron of Honor
+                </div>
+                <img
+                    src="./assets/taurus.png" 
+                    alt="taurus"
+                >
+                <div class="wedding-party-member-description mx-auto text-sm max-w-[80%] md:row-span-3 align-text-top">
+                    Brooklynn and Jess first met working in catering & special events at Kings Island about 10 years ago, working through all hours of the day and night to deliver events that were both beautiful and incredibly fun. Their connection was instant, and they quickly became inseparable. From spontaneous road trips to deep late-night conversations, Brooklynn has been a Jess's best friend and confidante. Brooklynn's infectious laughter and unwavering support have been a constant source of joy.
+                </div>
+            </div>
+            <div class="wedding-party-member h-full md:grid md:grid-auto-rows md:grid-flow-col">
+                <div class="wedding-party-member-name uppercase text-xl font-bold text-center md:text-right">
+                    JB
+                </div>
+                <div class="wedding-party-member-role uppercase text-md text-center md:text-right">
+                    Best Man
+                </div>
+                <img
+                    src="./assets/gemini.png" 
+                    alt="gemini"
+                >
+                <div class="wedding-party-member-description mx-auto text-sm max-w-[80%] md:row-span-3 align-text-top">
+                    JP has known JB for as long as he has been alive. And yes, JP is younger, but he is also taller. From the countryside to the city they grew together helping each other, though the process required one of them to break his leg and the other to loose money to a train station scam. Live and learn.
+                </div>
+            </div>
+            <div class="wedding-party-member h-full md:grid md:grid-auto-rows md:grid-flow-col">
+                <div class="wedding-party-member-name uppercase text-xl font-bold text-center md:text-right">
+                    Lauren
+                </div>
+                <div class="wedding-party-member-role uppercase text-md text-center md:text-right">
+                    Bridesmaid
+                </div>
+                <img
+                    src="./assets/pisces.png" 
+                    alt="pisces"
+                >
+                <div class="wedding-party-member-description mx-auto text-sm max-w-[80%] md:row-span-3 align-text-top">
+                    Lauren is not only Jess's sister but also one of her favorite people in the world. Their relationship has been a cornerstone of the Jess's life, marked by cherished traditions and an obscene number of Insta Reels they send each other at all hours of the day or spending HOURS running dungeons on Elder Scrolls Online. Lauren's humor and wit, coupled with her incredible empathy and strength, has made her an irreplaceable part of Jess's life.
+                </div>
+            </div>
+            <div class="wedding-party-member h-full md:grid md:grid-auto-rows md:grid-flow-col">
+                <div class="wedding-party-member-name uppercase text-xl font-bold text-center md:text-right">
+                    Luc
+                </div>
+                <div class="wedding-party-member-role uppercase text-md text-center md:text-right">
+                    Groomsman
+                </div>
+                <img
+                    src="./assets/scorpio.png" 
+                    alt="scorpio"
+                >
+                <div class="wedding-party-member-description mx-auto text-sm max-w-[80%] md:row-span-3 align-text-top">
+                    Luc and JP shared a childhood, "sharing" being the key word - their parents don't remember any time where they fought for toys. They also shared in many activities growing up: violin, capoeira, rowing, wrestling with JB... Now separated by an ocean they still connect through their shared interests in games, programming, and the weirdness of life and society.
+                </div>
+            </div>
+            <div class="wedding-party-member h-full md:grid md:grid-auto-rows md:grid-flow-col">
+                <div class="wedding-party-member-name uppercase text-xl font-bold text-center md:text-right">
+                    Ashley
+                </div>
+                <div class="wedding-party-member-role uppercase text-md text-center md:text-right">
+                    Bridesmaid
+                </div>
+                <img
+                    src="./assets/taurus.png" 
+                    alt="taurus"
+                >
+                <div class="wedding-party-member-description mx-auto text-sm max-w-[80%] md:row-span-3 align-text-top">
+                    Ashley is one of Jess's very first friends. Growing up across the street from each other, these two have a bond that few others share -- they are true childhood friends. From playing Barbies & Polly Pockets to running through sprinklers and other neighborhood shenanigans, Ashley has been a consistent voice of love and support throughout many phases of their lives.
+                </div>
+            </div>
+            <div class="wedding-party-member h-full md:grid md:grid-auto-rows md:grid-flow-col">
+                <div class="wedding-party-member-name uppercase text-xl font-bold text-center md:text-right">
+                    Matt
+                </div>
+                <div class="wedding-party-member-role uppercase text-md text-center md:text-right">
+                    Groomsman
+                </div>
+                <img
+                    src="./assets/aquarius.png" 
+                    alt="aquarius"
+                >
+                <div class="wedding-party-member-description mx-auto text-sm max-w-[80%] md:row-span-3 align-text-top">
+                    Matt and JP first met as strangers in the Aldebaran Atelier in Paris and nerded out over robot User Experience. Jump forward about a year in the San Francisco office kitchen, and as JP gets his cereal he hears an Australian accent: "excuse me but, have we met?" From SF to Paris to Boston to Tokyo, they kept nerding out and imagining the future.
+                </div>
+            </div>
+            <div class="wedding-party-member h-full md:grid md:grid-auto-rows md:grid-flow-col">
+                <div class="wedding-party-member-name uppercase text-xl font-bold text-center md:text-right">
+                    Kyla
+                </div>
+                <div class="wedding-party-member-role uppercase text-md text-center md:text-right">
+                    Bridesmaid
+                </div>
+                <img
+                    src="./assets/aquarius.png" 
+                    alt="aquarius"
+                >
+                <div class="wedding-party-member-description mx-auto text-sm max-w-[80%] md:row-span-3 align-text-top">
+                    Kyla and Jess first crossed paths in high school, but it was during college that their friendship truly blossomed. With a shared love for music, their connection deepened as they bonded over their favorite tunes and concerts. Kyla's enthusiasm and musical talent have always been a source of inspiration for Jess. Kyla's vibrant energy and thoughtful support have made her a cherished friend. Her presence adds a special note (ba dum tss) to this celebration, and Jess is thrilled to have her as a bridesmaid.
+                </div>
+            </div>
+            <div class="wedding-party-member h-full md:grid md:grid-auto-rows md:grid-flow-col">
+                <div class="wedding-party-member-name uppercase text-xl font-bold text-center md:text-right">
+                    Nicolas
+                </div>
+                <div class="wedding-party-member-role uppercase text-md text-center md:text-right">
+                    Groomsman
+                </div>
+                <img
+                    src="./assets/libra.png" 
+                    alt="libra"
+                >
+                <div class="wedding-party-member-description mx-auto text-sm max-w-[80%] md:row-span-3 align-text-top">
+                    Nicolas is the reason JP now prefers working on MacOS, it only took a couple of years of convincing. More importantly, Nicolas and JP have been colleagues and friends for 10 years, and took the jump over the ocean and toward the US together.
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="venue" class="min-h-screen py-56">
