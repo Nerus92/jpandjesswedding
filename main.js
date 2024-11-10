@@ -64,17 +64,19 @@ window.addEventListener('scroll', updateActiveLink);
 // Run once on page load
 updateActiveLink();
 /* RSVP Modal */
-const rsvpButton = document.getElementById('rsvp-button');
+const rsvpButtons = document.querySelectorAll('#rsvp-button');
 const rsvpModal = document.getElementById('rsvp-modal');
 const waitButton = document.getElementById('wait-button');
 const readyButton = document.getElementById('ready-button');
 const RSVP_URL = 'https://jessica-and-jean-philippe.thatstheone.com/rsvp';
-rsvpButton?.addEventListener('click', (e) => {
-    e.preventDefault();
-    rsvpModal?.classList.remove('hidden');
-    // Small delay to ensure the display: none is removed before starting the fade
-    requestAnimationFrame(() => {
-        rsvpModal?.classList.add('visible');
+rsvpButtons?.forEach(button => {
+    button?.addEventListener('click', (e) => {
+        e.preventDefault();
+        rsvpModal?.classList.remove('hidden');
+        // Small delay to ensure the display: none is removed before starting the fade
+        requestAnimationFrame(() => {
+            rsvpModal?.classList.add('visible');
+        });
     });
 });
 waitButton?.addEventListener('click', () => {
