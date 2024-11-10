@@ -10,9 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link href="./styles.css" rel="stylesheet">
 </head>
-<body class="w-full">
-    <div class="sticky top-0 z-40 text-white bg-black w-full">
-        <div class="w-full p-2 top-0 bg-white z-50" id="countdown-banner">
+<body class="w-full flex flex-col">
+    <div class="fixed top-0 z-40 text-white bg-black w-full">
+        <div class="w-full p-2 top-0 z-50" id="countdown-banner">
             <p class="text-center font-nats text-sm font-bold" id="countdown"></p>
             <p class="text-center uppercase font-nats text-sm font-bold">To Go!</p>
         </div>
@@ -40,10 +40,7 @@
         </section>
         <section id="mobile-menu"
             class="justify-center absolute hidden w-full origin-top animate-open-menu flex-col bg-black text-3xl">
-            <!-- <button class="text-8xl self-end px-6">
-                        &times;
-                    </button> -->
-            <nav class="flex min-h-screen flex-col items-center gap-8 mt-12" aria-label="mobile">
+            <nav class="flex min-h-screen flex-col justify-evenly items-center pb-48" aria-label="mobile">
                 <a href="#our-story">Our story</a>
                 <a href="#theme">Theme</a>
                 <a href="#wedding-party">Wedding party</a>
@@ -55,77 +52,74 @@
         </section>
     </div>
 
-    <main class="container mx-auto pt-32">
-        <section id="our-story" class="h-screen w-full relative">
-            <div class="flex flex-col w-2/3 items-center">
-                <div class="font-nats tracking-widest text-[11rem] text-gray-300 opacity-50">
-                    06.13.2025
-                </div>
-                <div class="text-9xl font-nats tracking-wide -mt-36 z-10">
-                    JESS + JP
-                </div>
-                <div class="font-cursive mt-32 text-5xl">
-                    Château de la Napoule
-                </div>
-                <div class="mt-8 text-center font-thin">
-                    Av. Henry Clews, 06210<br>
-                    Mandelieu-la-Napoule, France
-                </div>
+    <section id="our-story" class="h-screen w-full pt-[40%] md:pt-56">
+        <div class="flex flex-col h-full w-full md:w-2/3 items-center">
+            <div class="font-nats tracking-widest text-7xl md:text-[11rem] text-gray-300 opacity-50">
+                06.13.2025
             </div>
-            
-            <div class="absolute right-0 bottom-36 w-[600px] h-[600px]">
-                <img 
-                    src="./assets/couple-photo.png" 
-                    alt="Couple" 
-                    class="absolute object-cover z-10"
-                >
-                <img 
-                    src="./assets/nebula-bg.png" 
-                    alt="nebula" 
-                    class="absolute z-0"
-                >
+            <div class="text-6xl md:text-9xl font-nats tracking-wide -mt-10 md:-mt-24 z-10">
+                JESS + JP
             </div>
-        </section>
+            <div class="font-cursive mt-8 md:mt-32 text-4xl md:text-5xl z-20">
+                Château de la Napoule
+            </div>
+            <div class="mt-8 text-center font-thin z-20">
+                Av. Henry Clews, 06210<br>
+                Mandelieu-la-Napoule, France
+            </div>
+        </div>
+        
+        <img
+            src="./assets/couple-photo.png" 
+            alt="Couple" 
+            class="absolute bottom-0 right-0 object-cover z-10 opacity-50 md:opacity-100"
+        >
+        <img 
+            src="./assets/nebula-bg.png" 
+            alt="nebula" 
+            class="absolute bottom-0 right-0 z-0"
+        >
+    </section>
 
-        <section id="theme" class="min-h-screen py-56">
-            <h2 class="text-3xl font-bold mb-8 text-center">Theme</h2>
-        </section>
+    <section id="theme" class="min-h-screen py-56">
+        <h2 class="text-3xl font-bold mb-8 text-center">Theme</h2>
+    </section>
 
-        <section id="wedding-party" class="min-h-screen py-56">
-            <h2 class="text-3xl font-bold mb-8 text-center">Wedding Party</h2>
-        </section>
+    <section id="wedding-party" class="min-h-screen py-56">
+        <h2 class="text-3xl font-bold mb-8 text-center">Wedding Party</h2>
+    </section>
 
-        <section id="venue" class="min-h-screen py-56">
-            <h2 class="text-3xl font-bold mb-8 text-center">Venue</h2>
-        </section>
+    <section id="venue" class="min-h-screen py-56">
+        <h2 class="text-3xl font-bold mb-8 text-center">Venue</h2>
+    </section>
 
-        <section id="schedule" class="min-h-screen py-56">
-            <h2 class="text-3xl font-bold mb-8 text-center">Schedule</h2>
-        </section>
+    <section id="schedule" class="min-h-screen py-56">
+        <h2 class="text-3xl font-bold mb-8 text-center">Schedule</h2>
+    </section>
 
-        <section id="guest-info" class="min-h-screen py-56">
-            <h2 class="text-3xl font-bold mb-8 text-center">Guest Information</h2>
-        </section>
+    <section id="guest-info" class="min-h-screen py-56">
+        <h2 class="text-3xl font-bold mb-8 text-center">Guest Information</h2>
+    </section>
 
-        <section id="faq" class="min-h-screen py-56">
-            <h2 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
-        </section>
-    </main>
+    <section id="faq" class="min-h-screen py-56">
+        <h2 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+    </section>
     
     <script type="module" src="./main.js"></script>
 
-    <!-- Add this right before the closing body tag -->
+    <a href="#" id="rsvp-button" class="md:hidden absolute bottom-0 left-1/2 -translate-x-1/2 -translate-y-full z-10 w-2/3 h-16 bg-white bg-opacity-50 hover:bg-opacity-80 hover:text-gray-700 transition-all border border-white rounded-full text-center content-center text-2xl">RSVP</a>
+
     <div id="rsvp-modal" class="fixed inset-0 bg-black z-50 hidden">
-        <div class="flex flex-col items-center justify-center h-full space-y-4 p-4">
+        <div class="h-full flex flex-col gap-4 items-center justify-center p-4">
             <p class="text-center">YOU'RE BEING REROUTED AWAY FROM THIS SITE...</p>
             <p class="text-center">YOUR BROWSER IS GOING TO GO FROM A BLACK BACKGROUND TO A WHITE ONE.</p>
             <p class="text-center">SHIELD YOUR EYES. YOU'VE BEEN WARNED ;)</p>
             
-            <div class="flex space-x-4 mt-8">
-                <button id="wait-button" class="px-8 py-2 border rounded-full transition-all">
+            <div class="w-full flex gap-8 items-center mt-16 flex-col md:flex-row md:gap-16 md:w-1/2">
+                <button id="wait-button" class="w-2/3 h-16 text-center content-center text-xl border rounded-full transition-all">
                     WAIT! NO!
                 </button>
-                <button id="ready-button" class="px-8 py-2 border rounded-full transition-all">
+                <button id="ready-button" class="w-2/3 h-16 text-center content-center text-xl border rounded-full transition-all">
                     I'M READY
                 </button>
             </div>
