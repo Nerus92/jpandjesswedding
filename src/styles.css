@@ -24,6 +24,7 @@ a {
 a.selected {
     transform: scale(1.1);
     transition: all .3s ease;
+    font-weight: 700;
 }
 
 .couple {
@@ -66,8 +67,15 @@ a.selected {
 /* Import a cursive font for the venue name */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
+@font-face {
+    font-family: 'Amsterdam';
+    src: url('./assets/Amsterdam.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .font-cursive {
-    font-family: "Amsterdam Four_ttf";
+    font-family: "Amsterdam";
 }
 
 .font-nats {
@@ -95,7 +103,7 @@ a.selected {
 }
 
 #our-story img:hover {
-    transform: scale(1.02);
+    transform: scale(1.27);
 }
 
 @keyframes open-menu {
@@ -120,4 +128,8 @@ a.selected {
     .toggle-btn {
         @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent [&>div]:rotate-[720deg]
     }
+}
+
+.bottom-gradient {
+    mask-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,1) 10%);
 }
