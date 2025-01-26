@@ -305,8 +305,127 @@
         <h2 class="text-3xl font-bold mb-8 text-center">Schedule</h2>
     </section>
 
-    <section id="guest-info" class="min-h-screen w-full py-56">
-        <h2 class="text-3xl font-bold mb-8 text-center">Guest Information</h2>
+    <section id="guest-info" class="min-h-screen w-full py-56 flex flex-col items-center gap-16">
+        <h2 class="font-nats uppercase mb-8 text-center text-4xl md:text-8xl ">Guest Information</h2>
+        <div class="max-w-[80%] flex flex-col items-center gap-32 md:grid md:grid-cols-2 md:justify-items-center md:items-start">
+            <div class="flex flex-col items-center gap-16">
+                <h3 class="font-cursive md:text-3xl">Dress Code</h3>
+                <p class="text-base">Help us make the galaxy come alive!</p>
+                <div class="flex flex-col items-center text-center gap-4">
+                    <p class="font-bold">Formal / Black tie optional (dress your best!)</p>
+                    <p>Celestial motifs, glitter, and sequins are encouraged, but not required.</p>
+                </div>
+                <div class="flex flex-row gap-8">
+                    <div class="flex flex-col items-center gap-4">
+                        <img 
+                            src="./assets/attire_black.png" 
+                            alt="Black Attire" 
+                            class=""
+                        >
+                        <p>black</p>
+                    </div>
+                    <div class="flex flex-col items-center gap-4">
+                        <img 
+                            src="./assets/attire_navy.png" 
+                            alt="Navy Attire" 
+                            class=""
+                        >
+                        <p>navy</p>
+                    </div>
+                    <div class="flex flex-col items-center gap-4">
+                        <img 
+                            src="./assets/attire_purple.png" 
+                            alt="Purple Attire" 
+                            class=""
+                        >
+                        <p>purple</p>
+                    </div>
+                    <div class="flex flex-col items-center gap-4">
+                        <img 
+                            src="./assets/attire_pink.png" 
+                            alt="Pink Attire" 
+                            class=""
+                        >
+                        <p>pink</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col items-center gap-16">
+                <h3 class="font-cursive md:text-3xl">Accomodations</h3>
+                <p class="text-base">We've saved room for you! book at {URL}</p>
+            </div>
+            <div class="flex flex-col items-center gap-16">
+                <h3 class="font-cursive md:text-3xl">Travel / Directions</h3>
+                <p class="text-base mb-2">The Château is located 7 kilometres (4 miles) west of Cannes (towards Aix-en-Provence).</p>
+
+                <div class="flex flex-col gap-6">
+                    <div>
+                        <p class="font-bold mb-2">By train:</p>
+                        <p>TER to La Napoule stop (situated directly facing the Château) or TGV stopping at Cannes Train Station.</p>
+                    </div>
+
+                    <div>
+                        <p class="font-bold mb-2">By car:</p>
+                        <p>Highway A8, taking exit 40 to "Mandelieu Centre."</p>
+                        <p>Coming from Italy: the exit is after "Cannes" and "La Bocca"</p>
+                        <p>Coming from Aix/Marseille: the exit is after "Frejus" and "Les Adrets."</p>
+                    </div>
+
+                    <div>
+                        <p class="font-bold mb-2">Parking:</p>
+                        <p>The château does not have any allocated parking spots.</p>
+                        <p>Here are some nearby parking areas:</p>
+                        <ul class="list-disc ml-6 mt-2">
+                            <li>Parking St Fainéant: 50 places</li>
+                            <li>Parking Soustelle: 40 places</li>
+                            <li>Some parking spots may be available on Avenue Henry Clews</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p class="font-bold mb-2">By plane:</p>
+                        <p>Nice-Côte d'Azur Airport (30 minutes on the highway to Mandelieu La Napoule</p>
+                    </div>
+
+                    <div>
+                        <p class="font-bold mb-4">Coming from the US?</p>
+                        <div class="flex flex-col gap-6">
+                            <div>
+                                <p class="font-bold mb-2">Option 1: Fly into Nice</p>
+                                <ul class="list-disc ml-6">
+                                    <li>Fly into Nice (NCE)</li>
+                                    <li>Grab a rental car and head to the Chateau or your nearby accommodation</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <p class="font-bold mb-2">Option 2: Fly into Paris (CDG)</p>
+                                <ul class="list-disc ml-6">
+                                    <li>Fly into Paris (CDG)</li>
+                                    <li>Take the RER B train to Paris Gare du Nord, then transfer to Paris Gare de Lyon using RER D or Metro line 4</li>
+                                    <li>Book a high-speed TGV train from Paris Gare de Lyon to Cannes. The journey typically takes around 5 to 6 hours (but is beautiful)</li>
+                                    <li>Grab a rental car and head to the Château or your nearby accommodation</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <p class="font-bold mb-2">Option 3: Fly into Paris (ORY)</p>
+                                <ul class="list-disc ml-6">
+                                    <li>Fly into Paris (ORY)</li>
+                                    <li>Take the Orlyval train to Antony, then transfer to RER B to Paris Gare du Nord, and proceed to Gare de Lyon.</li>
+                                    <li>Book a high-speed TGV train from Paris Gare de Lyon to Cannes. The journey typically takes around 5 to 6 hours (but is beautiful)</li>
+                                    <li>Grab a rental car and head to the Château or your nearby accommodation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col items-center gap-16">
+                <h3 class="font-cursive md:text-3xl">Things to Do</h3>
+                <p class="text-base">TBC</p>
+            </div>
+        </div>
     </section>
 
     <section id="faq" class="min-h-screen w-full py-56">
