@@ -132,4 +132,11 @@ const initApp = () => {
     mobileMenu?.addEventListener('click', toggleMenu)
 }
 
-document.addEventListener('DOMContentLoaded', initApp)
+document.querySelectorAll('.collapsible-header').forEach(button => {
+    button.addEventListener('click', () => {
+        const section = button.parentElement;
+        section.classList.toggle('active');
+    });
+}); 
+
+document.addEventListener('DOMContentLoaded', initApp);

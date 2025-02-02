@@ -136,23 +136,71 @@ a.selected {
 
 .tooltip {
     position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted white;
 }
 
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 250px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
-
+.tooltip::after {
+    content: attr(data-tooltip);
     position: absolute;
-    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 14px;
+    font-family: "Montserrat";
+    white-space: pre-wrap;
+    width: max-content;
+    max-width: 250px;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
 }
 
-.tooltip:hover .tooltiptext {
+.tooltip:hover::after {
+    opacity: 1;
     visibility: visible;
+    bottom: calc(100% + 10px);
+}
+
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 1rem;
+}
+
+.collapsible-section.active .collapsible-content {
+    max-height: 1000px; /* Adjust this value based on your content */
+    margin-top: 1rem;
+}
+
+.collapsible-header {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.collapsible-header:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.collapsible-section.active .collapsible-header span:last-child {
+    transform: rotate(180deg);
+}
+
+.group:hover > div {
+    display: block;
+}
+
+.group > div:hover {
+    display: block;
+}
+
+[id] {
+    scroll-margin-top: 18rem;
 }
