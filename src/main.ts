@@ -135,7 +135,7 @@ const initApp = () => {
 document.querySelectorAll('.collapsible-header').forEach(button => {
     button.addEventListener('click', () => {
         const section = button.parentElement;
-        section.classList.toggle('active');
+        section?.classList?.toggle('active');
     });
 }); 
 
