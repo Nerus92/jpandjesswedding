@@ -103,4 +103,10 @@ const initApp = () => {
     hamburgerBtn?.addEventListener('click', toggleMenu);
     mobileMenu?.addEventListener('click', toggleMenu);
 };
+document.querySelectorAll('.collapsible-header').forEach(button => {
+    button.addEventListener('click', () => {
+        const section = button.parentElement;
+        section?.classList?.toggle('active');
+    });
+});
 document.addEventListener('DOMContentLoaded', initApp);

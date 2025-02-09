@@ -24,7 +24,7 @@
                     class="absolute top-4 -mt-0.5 h-1 w-8 rounded bg-white transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-white before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-white after:transition-all after:duration-500 after:content-['']">
                 </div>
             </button>
-            <nav class="hidden md:flex flex-row justify-around w-full uppercase py-4 bg-black text-white items-center" aria-label="main" id="navbar">
+            <nav class="hidden md:flex flex-row justify-around w-full uppercase py-4 bg-black text-white items-center z-10" aria-label="main" id="navbar">
                 <div class="absolute bottom-8 h-2 bg-white transition-all ease-linear" id="nav-indicator"></div>
                 <a href="#our-story">Our story</a>
                 <a href="#theme">Theme</a>
@@ -34,7 +34,18 @@
                 <img src="./assets/couple.png" alt="couple" class="couple h-16 w-16 rounded-full p-2">
     
                 <a href="#schedule">Schedule</a>
-                <a href="#guest-info">Guest info</a>
+                <div class="relative group">
+                    <a href="#guest-info" class="inline-block">Guest info</a>
+                    <div class="absolute hidden group-hover:block bg-black bg-opacity-90 p-4 rounded-lg -left-8 mt-2 min-w-[200px] border border-white border-opacity-20">
+                        <div class="absolute h-2 -top-2 left-0 right-0"></div>
+                        <div class="flex flex-col gap-3">
+                            <a href="#dress-code" class="hover:font-bold transition-all whitespace-nowrap">Dress Code</a>
+                            <a href="#accommodations" class="hover:font-bold transition-all whitespace-nowrap">Accommodations</a>
+                            <a href="#travel" class="hover:font-bold transition-all whitespace-nowrap">Travel / Directions</a>
+                            <a href="#things-to-do" class="hover:font-bold transition-all whitespace-nowrap">Things to Do</a>
+                        </div>
+                    </div>
+                </div>
                 <a href="#faq">FAQ</a>
                 <a href="#" id="rsvp-button" class="hover:font-bold hover:bg-white hover:bg-opacity-30 transition-all border border-white rounded-full px-8 py-2">RSVP</a>
             </nav>
@@ -55,7 +66,7 @@
     </div>
 
     <section id="our-story" class="min-h-screen w-full pt-[40%] md:pt-56 flex flex-col items-center md:items-start">
-        <div class="flex flex-col h-full w-full md:w-2/3 items-center">
+        <div class="flex flex-col h-full w-full md:w-3/5 items-center pt-12">
             <div class="font-nats tracking-widest text-7xl md:text-[11rem] text-gray-300 opacity-50">
                 06.13.2025
             </div>
@@ -83,23 +94,23 @@
         >
 
         <h2 class="font-nats uppercase self-center mt-96 pt-96 text-4xl md:text-8xl">Our Story</h2>
-        <h3 class="font-cursive self-center text-2xl md:text-6xl">the artist & the engineer</h3>
+        <h3 class="font-cursive self-center text-2xl md:text-4xl">the artist & the engineer</h3>
 
     </section>
 
     <section id="theme" class="min-h-screen w-full mt-16 md:mt-[40rem] flex flex-col items-center">
         <h2 class="font-nats uppercase text-4xl md:text-8xl text-center align-baseline">We are all <span class="font-cursive lowercase align-baseline">stardust</span></h2>
-        <h3 class="font-cursive self-center text-2xl md:text-6xl text-center">one part science. one part magic.</h3>
+        <h3 class="font-cursive self-center text-2xl md:text-4xl text-center">one part science. one part magic.</h3>
         <h4 class="text-lg md:text-2xl uppercase mt-16 mb-6">Intro</h4>
-        <div class="text-center px-8 text-sm md:text-lg md:max-w-[66%]">"We Are All Stardust," reflects the wonder of our cosmic origins and the extraordinary chance that brought us together. Each of us is made from the same stardust—atoms that have journeyed through the universe for billions of years that were forged from ancient stars. This profound connection highlights the remarkable way our individual paths have aligned to create this special moment.</div>
+        <div class="text-center px-8 md:max-w-[66%]">"We Are All Stardust," reflects the wonder of our cosmic origins and the extraordinary chance that brought us together. Each of us is made from the same stardust—atoms that have journeyed through the universe for billions of years that were forged from ancient stars. This profound connection highlights the remarkable way our individual paths have aligned to create this special moment.</div>
         <h4 class="text-lg md:text-2xl uppercase mt-6 mb-6">His connection</h4>
-        <div class="text-center px-8 text-sm md:text-lg md:max-w-[66%]">Looking back, it's awe-inspiring to consider the scientific marvel of how our lives intersected. Out of the infinite possibilities of how our atoms could have come together, the universe orchestrated our meeting in a way that feels both miraculous and deeply significant. The alignment of our stories is a beautiful testament to the randomness and beauty of cosmic chance.</div>
+        <div class="text-center px-8 md:max-w-[66%]">Looking back, it's awe-inspiring to consider the scientific marvel of how our lives intersected. Out of the infinite possibilities of how our atoms could have come together, the universe orchestrated our meeting in a way that feels both miraculous and deeply significant. The alignment of our stories is a beautiful testament to the randomness and beauty of cosmic chance.</div>
         <h4 class="text-lg md:text-2xl uppercase mt-6 mb-6">Her connection</h4>
-        <div class="text-center px-8 text-sm md:text-lg md:max-w-[66%]">As we celebrate with our loved ones, we are reminded of how our unique journeys have intertwined. The presence of family and friends adds depth to our celebration, illustrating how each person's path has contributed to our shared story. This day is a tribute not only to our love but also to the meaningful connections that have shaped our lives.</div>
+        <div class="text-center px-8 md:max-w-[66%]">As we celebrate with our loved ones, we are reminded of how our unique journeys have intertwined. The presence of family and friends adds depth to our celebration, illustrating how each person's path has contributed to our shared story. This day is a tribute not only to our love but also to the meaningful connections that have shaped our lives.</div>
         <h4 class="text-lg md:text-2xl uppercase mt-6 mb-6">Family link</h4>
-        <div class="text-center px-8 text-sm md:text-lg md:max-w-[66%]">The theme "We Are All Stardust" underscores the joy of sharing this milestone with those who have been part of our journey. It's a celebration of how the universe, with its boundless possibilities, has brought us together and gathered our loved ones for this occasion. The convergence of our stardust and the collective presence of our cherished guests highlight the wonder of this moment.</div>
+        <div class="text-center px-8 md:max-w-[66%]">The theme "We Are All Stardust" underscores the joy of sharing this milestone with those who have been part of our journey. It's a celebration of how the universe, with its boundless possibilities, has brought us together and gathered our loved ones for this occasion. The convergence of our stardust and the collective presence of our cherished guests highlight the wonder of this moment.</div>
         <h4 class="text-lg md:text-2xl uppercase mt-6 mb-6">Excitement, close, sharing with you</h4>
-        <div class="text-center px-8 text-sm md:text-lg md:max-w-[66%]">As we embark on this new chapter, we are grateful for the cosmic forces that led us to each other. Our wedding is a celebration of the miraculous alignment of our lives and the excitement of starting our future surrounded by the people we hold dear. It's a reminder of the extraordinary nature of our connection and the joy of sharing it with all of you.</div>
+        <div class="text-center px-8 md:max-w-[66%]">As we embark on this new chapter, we are grateful for the cosmic forces that led us to each other. Our wedding is a celebration of the miraculous alignment of our lives and the excitement of starting our future surrounded by the people we hold dear. It's a reminder of the extraordinary nature of our connection and the joy of sharing it with all of you.</div>
     </section>
 
     <section id="wedding-party" class="relative min-h-screen w-full mt-16 md:mt-[40rem] flex flex-col items-center gap-6 md:gap-16">
@@ -119,7 +130,7 @@
                     alt="leo"
                     class="w-56 max-h-56 p-4 m-auto"
                 >
-                <div class="wedding-party-member-description mx-auto text-sm text-center max-w-[80%] md:text-left md:row-span-3 align-text-top">
+                <div class="wedding-party-member-description mx-auto text-center max-w-[80%] md:text-left md:row-span-3 align-text-top">
                     Brooklynn and Jess first met working in catering & special events at Kings Island about 10 years ago, working through all hours of the day and night to deliver events that were both beautiful and incredibly fun. Their connection was instant, and they quickly became inseparable. From spontaneous road trips to deep late-night conversations, Brooklynn has been a Jess's best friend and confidante. Brooklynn's infectious laughter and unwavering support have been a constant source of joy.
                 </div>
             </div>
@@ -135,7 +146,7 @@
                     alt="gemini"
                     class="w-56 max-h-56 p-4 m-auto"
                 >
-                <div class="wedding-party-member-description mx-auto text-sm text-center max-w-[80%] md:text-left md:row-span-3 align-text-top">
+                <div class="wedding-party-member-description mx-auto text-center max-w-[80%] md:text-left md:row-span-3 align-text-top">
                     JP has known JB for as long as he has been alive. And yes, JP is younger, but he is also taller. From the countryside to the city they grew together helping each other, though the process required one of them to break his leg and the other to loose money to a train station scam. Live and learn.
                 </div>
             </div>
@@ -151,7 +162,7 @@
                     alt="pisces"
                     class="w-56 max-h-56 p-4 m-auto"
                 >
-                <div class="wedding-party-member-description mx-auto text-sm text-center max-w-[80%] md:text-left md:row-span-3 align-text-top">
+                <div class="wedding-party-member-description mx-auto text-center max-w-[80%] md:text-left md:row-span-3 align-text-top">
                     Lauren is not only Jess's sister but also one of her favorite people in the world. Their relationship has been a cornerstone of the Jess's life, marked by cherished traditions and an obscene number of Insta Reels they send each other at all hours of the day or spending HOURS running dungeons on Elder Scrolls Online. Lauren's humor and wit, coupled with her incredible empathy and strength, has made her an irreplaceable part of Jess's life.
                 </div>
             </div>
@@ -167,7 +178,7 @@
                     alt="scorpio"
                     class="w-56 max-h-56 p-4 m-auto"
                 >
-                <div class="wedding-party-member-description mx-auto text-sm text-center max-w-[80%] md:text-left md:row-span-3 align-text-top">
+                <div class="wedding-party-member-description mx-auto text-center max-w-[80%] md:text-left md:row-span-3 align-text-top">
                     Luc and JP shared a childhood, "sharing" being the key word - their parents don't remember any time where they fought for toys. They also shared in many activities growing up: violin, capoeira, rowing, wrestling with JB... Now separated by an ocean they still connect through their shared interests in games, programming, and the weirdness of life and society.
                 </div>
             </div>
@@ -183,7 +194,7 @@
                     alt="taurus"
                     class="w-56 max-h-56 p-4 m-auto"
                 >
-                <div class="wedding-party-member-description mx-auto text-sm text-center max-w-[80%] md:text-left md:row-span-3 align-text-top">
+                <div class="wedding-party-member-description mx-auto text-center max-w-[80%] md:text-left md:row-span-3 align-text-top">
                     Ashley is one of Jess's very first friends. Growing up across the street from each other, these two have a bond that few others share -- they are true childhood friends. From playing Barbies & Polly Pockets to running through sprinklers and other neighborhood shenanigans, Ashley has been a consistent voice of love and support throughout many phases of their lives.
                 </div>
             </div>
@@ -199,7 +210,7 @@
                     alt="aquarius"
                     class="w-56 max-h-56 p-4 m-auto"
                 >
-                <div class="wedding-party-member-description mx-auto text-sm text-center max-w-[80%] md:text-left md:row-span-3 align-text-top">
+                <div class="wedding-party-member-description mx-auto text-center max-w-[80%] md:text-left md:row-span-3 align-text-top">
                     Matt and JP first met as strangers in the Aldebaran Atelier in Paris and nerded out over robot User Experience. Jump forward about a year in the San Francisco office kitchen, and as JP gets his cereal he hears an Australian accent: "excuse me but, have we met?" From SF to Paris to Boston to Tokyo, they kept nerding out and imagining the future.
                 </div>
             </div>
@@ -215,7 +226,7 @@
                     alt="aquarius"
                     class="w-56 max-h-56 p-4 m-auto"
                 >
-                <div class="wedding-party-member-description mx-auto text-sm text-center max-w-[80%] md:text-left md:row-span-3 align-text-top">
+                <div class="wedding-party-member-description mx-auto text-center max-w-[80%] md:text-left md:row-span-3 align-text-top">
                     Kyla and Jess first crossed paths in high school, but it was during college that their friendship truly blossomed. With a shared love for music, their connection deepened as they bonded over their favorite tunes and concerts. Kyla's enthusiasm and musical talent have always been a source of inspiration for Jess. Kyla's vibrant energy and thoughtful support have made her a cherished friend. Her presence adds a special note (ba dum tss) to this celebration, and Jess is thrilled to have her as a bridesmaid.
                 </div>
             </div>
@@ -231,7 +242,7 @@
                     alt="libra"
                     class="w-56 max-h-56 p-4 m-auto"
                 >
-                <div class="wedding-party-member-description mx-auto text-sm text-center max-w-[80%] md:text-left md:row-span-3 align-text-top">
+                <div class="wedding-party-member-description mx-auto text-center max-w-[80%] md:text-left md:row-span-3 align-text-top">
                     Nicolas is the reason JP now prefers working on MacOS, it only took a couple of years of convincing. More importantly, Nicolas and JP have been colleagues and friends for 10 years, and took the jump over the ocean and toward the US together.
                 </div>
             </div>
@@ -240,7 +251,7 @@
         <img 
             src="./assets/nebula_1.png" 
             alt="nebula" 
-            class="absolute -top-16 left-8 md:-top-60 md:left-32"
+            class="absolute -top-16 left-8 md:-top-96 md:left-32"
         >
 
         <img 
@@ -274,20 +285,20 @@
         >
     </section>
 
-    <section id="venue" class="relative min-h-screen w-full mt-16 md:mt-[40rem] flex flex-col gap-6 items-center py-56">
+    <section id="venue" class="relative min-h-screen w-full mt-16 md:mt-[20rem] flex flex-col gap-6 items-center">
         <h2 class="font-nats uppercase self-center text-4xl md:text-8xl z-10">Explore the Venue</h2>
-        <h3 class="font-cursive self-center text-2xl md:text-3xl mb-12 z-10">Château de la Napoule</h3>
-        <p class="text-center mt-36 md:mt-[55rem] text-base max-w-[80%] md:max-w-[60%]">
+        <h3 class="font-cursive self-center text-2xl md:text-4xl mb-12 z-10">Château de la Napoule</h3>
+        <p class="text-center mt-96 md:mt-[55rem] text-base max-w-[80%] md:max-w-[60%]">
             In the early 20th century, Henry and Marie Clews stumbled upon the weathered remains of a medieval fortress on the French Riviera. To most, it might have been little more than a forgotten relic of stone and ivy, but to Henry and Marie, it was the beginning of a story—a story of revival, of art, of love. They saw in its broken walls the potential for something timeless, something that could honor the past while creating beauty for the future. Together, they poured their hearts into rebuilding the Château, each decision guided by a shared belief in the transformative power of imagination.
         </p>
         <p class="text-center mt-6 text-base max-w-[80%] md:max-w-[60%]">
-            Today, the <a href="https://www.lnaf.org/" target="_blank" class="underline">Château de la Napoule</a> is a testament to their devotion. Its lush gardens, intricate sculptures, and timeless halls breathe with their vision. As an Art Foundation, it now nurtures creativity, inviting artists to draw from its magic while inspiring young minds through programs that take art into schools and communities. There’s an undeniable sense of something larger at play here—something that connects every person who walks through its gates to an ever-widening circle of beauty and inspiration.
+            Today, the <a href="https://www.lnaf.org/" target="_blank" class="underline">Château de la Napoule</a> is a testament to their devotion. Its lush gardens, intricate sculptures, and timeless halls breathe with their vision. As an Art Foundation, it now nurtures creativity, inviting artists to draw from its magic while inspiring young minds through programs that take art into schools and communities. There's an undeniable sense of something larger at play here—something that connects every person who walks through its gates to an ever-widening circle of beauty and inspiration.
         </p>
         <p class="text-center mt-6 text-base max-w-[80%] md:max-w-[60%]">
-            Perhaps that’s why this place feels so right for us. It doesn’t simply hold history; it holds wonder. There’s a quiet parallel between the Clews’ vision and the vastness of the galaxy that draws us in. Just as the stars are bound together in constellations, each shaping the story of the night sky, the Château reminds us of the invisible threads connecting us all—threads of creativity, curiosity, and a shared journey.
+            Perhaps that's why this place feels so right for us. It doesn't simply hold history; it holds wonder. There's a quiet parallel between the Clews' vision and the vastness of the galaxy that draws us in. Just as the stars are bound together in constellations, each shaping the story of the night sky, the Château reminds us of the invisible threads connecting us all—threads of creativity, curiosity, and a shared journey.
         </p>
         <p class="text-center mt-6 text-base max-w-[80%] md:max-w-[60%]">
-            Perched above the endless blue of the Mediterranean, Château de la Napoule feels like a bridge between worlds: past and future, seen and unseen. It’s more than our wedding venue; it’s a place that mirrors the extraordinary chance of our own story. Here, surrounded by timeless beauty and infinite possibility, we will celebrate the miracle of this moment—of two paths converging, under the same stars.
+            Perched above the endless blue of the Mediterranean, Château de la Napoule feels like a bridge between worlds: past and future, seen and unseen. It's more than our wedding venue; it's a place that mirrors the extraordinary chance of our own story. Here, surrounded by timeless beauty and infinite possibility, we will celebrate the miracle of this moment—of two paths converging, under the same stars.
         </p>
         <img 
             src="./assets/napoule_plan.png" 
@@ -297,22 +308,25 @@
         <img 
             src="./assets/napoule.png" 
             alt="napoule" 
-            class="absolute w-full top-40 md:-top-2 bottom-gradient"
+            class="absolute w-full top-40 md:-top-80 bottom-gradient"
         >
     </section>
 
-    <section id="schedule" class="min-h-screen w-full py-56">
-        <h2 class="text-3xl font-bold mb-8 text-center">Schedule</h2>
+    <section id="schedule" class="min-h-screen w-full items-center mt-16">
+        <h2 class="font-nats uppercase self-center text-4xl md:text-8xl z-10 mb-8 text-center">Schedule</h2>
     </section>
 
-    <section id="guest-info" class="min-h-screen w-full py-56 flex flex-col items-center gap-16">
-        <h2 class="font-nats uppercase mb-8 text-center text-4xl md:text-8xl ">Guest Information</h2>
-        <div class="max-w-[80%] flex flex-col items-center gap-32 md:grid md:grid-cols-2 md:justify-items-center md:items-start">
-            <div class="flex flex-col items-center gap-16">
-                <h3 class="font-cursive md:text-3xl">Dress Code</h3>
+    <section id="guest-info" class="min-h-screen w-full flex flex-col items-center gap-16 mx-auto">
+        <h2 class="font-nats uppercase mb-8 text-center text-4xl md:text-8xl">Guest Information</h2>
+        <div class="max-w-[80%] flex flex-col items-center gap-44">
+            <div id="dress-code" class="flex flex-col items-center gap-16">
+                <h3 class="font-cursive text-2xl md:text-4xl">Dress Code</h3>
                 <p class="text-base">Help us make the galaxy come alive!</p>
                 <div class="flex flex-col items-center text-center gap-4">
-                    <p class="font-bold">Formal / Black tie optional (dress your best!)</p>
+                    <p class="font-bold flex items-center gap-2">
+                        Formal / Black tie optional (dress your best!)
+                        <span class="material-symbols-outlined cursor-help tooltip" data-tooltip="For men: A dark suit and tie, or a tuxedo.&#10;&#10;For women: A formal floor-length gown, or an elegant cocktail dress. Think red carpet glamour!">help</span>
+                    </p>
                     <p>Celestial motifs, glitter, and sequins are encouraged, but not required.</p>
                 </div>
                 <div class="flex flex-row gap-8">
@@ -350,86 +364,116 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col items-center gap-16">
-                <h3 class="font-cursive md:text-3xl">Accomodations</h3>
+            <div id="accommodations" class="flex flex-col items-center gap-16">
+                <h3 class="font-cursive text-2xl md:text-4xl">Accomodations</h3>
                 <p class="text-base">We've saved room for you! book at {URL}</p>
             </div>
-            <div class="flex flex-col items-center gap-16">
-                <h3 class="font-cursive md:text-3xl">Travel / Directions</h3>
+            <div id="travel" class="flex flex-col items-center gap-16">
+                <h3 class="font-cursive text-2xl md:text-4xl">Travel / Directions</h3>
                 <p class="text-base mb-2">The Château is located 7 kilometres (4 miles) west of Cannes (towards Aix-en-Provence).</p>
 
                 <div class="flex flex-col gap-6">
-                    <div>
-                        <p class="font-bold mb-2">By train:</p>
-                        <p>TER to La Napoule stop (situated directly facing the Château) or TGV stopping at Cannes Train Station.</p>
+                    <div class="collapsible-section">
+                        <button class="collapsible-header flex items-center gap-2">
+                            <span class="material-symbols-outlined">train</span>
+                            <p class="font-bold">By train</p>
+                            <span class="material-symbols-outlined ml-auto transition-transform">expand_more</span>
+                        </button>
+                        <div class="collapsible-content">
+                            <p>TER to La Napoule stop (situated directly facing the Château) or TGV stopping at Cannes Train Station.</p>
+                        </div>
                     </div>
 
-                    <div>
-                        <p class="font-bold mb-2">By car:</p>
-                        <p>Highway A8, taking exit 40 to "Mandelieu Centre."</p>
-                        <p>Coming from Italy: the exit is after "Cannes" and "La Bocca"</p>
-                        <p>Coming from Aix/Marseille: the exit is after "Frejus" and "Les Adrets."</p>
+                    <div class="collapsible-section">
+                        <button class="collapsible-header flex items-center gap-2">
+                            <span class="material-symbols-outlined">directions_car</span>
+                            <p class="font-bold">By car</p>
+                            <span class="material-symbols-outlined ml-auto transition-transform">expand_more</span>
+                        </button>
+                        <div class="collapsible-content">
+                            <p>Highway A8, taking exit 40 to "Mandelieu Centre."</p>
+                            <p>Coming from Italy: the exit is after "Cannes" and "La Bocca"</p>
+                            <p>Coming from Aix/Marseille: the exit is after "Frejus" and "Les Adrets."</p>
+                        </div>
                     </div>
 
-                    <div>
-                        <p class="font-bold mb-2">Parking:</p>
-                        <p>The château does not have any allocated parking spots.</p>
-                        <p>Here are some nearby parking areas:</p>
-                        <ul class="list-disc ml-6 mt-2">
-                            <li>Parking St Fainéant: 50 places</li>
-                            <li>Parking Soustelle: 40 places</li>
-                            <li>Some parking spots may be available on Avenue Henry Clews</li>
-                        </ul>
+                    <div class="collapsible-section">
+                        <button class="collapsible-header flex items-center gap-2">
+                            <span class="material-symbols-outlined">local_parking</span>
+                            <p class="font-bold">Parking</p>
+                            <span class="material-symbols-outlined ml-auto transition-transform">expand_more</span>
+                        </button>
+                        <div class="collapsible-content">
+                            <p>The château does not have any allocated parking spots.</p>
+                            <p>Here are some nearby parking areas:</p>
+                            <ul class="list-disc ml-6 mt-2">
+                                <li>Parking St Fainéant: 50 places</li>
+                                <li>Parking Soustelle: 40 places</li>
+                                <li>Some parking spots may be available on Avenue Henry Clews</li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <div>
-                        <p class="font-bold mb-2">By plane:</p>
-                        <p>Nice-Côte d'Azur Airport (30 minutes on the highway to Mandelieu La Napoule</p>
+                    <div class="collapsible-section">
+                        <button class="collapsible-header flex items-center gap-2">
+                            <span class="material-symbols-outlined">flight</span>
+                            <p class="font-bold">By plane</p>
+                            <span class="material-symbols-outlined ml-auto transition-transform">expand_more</span>
+                        </button>
+                        <div class="collapsible-content">
+                            <p>Nice-Côte d'Azur Airport (30 minutes on the highway to Mandelieu La Napoule</p>
+                        </div>
                     </div>
 
-                    <div>
-                        <p class="font-bold mb-4">Coming from the US?</p>
-                        <div class="flex flex-col gap-6">
-                            <div>
-                                <p class="font-bold mb-2">Option 1: Fly into Nice</p>
-                                <ul class="list-disc ml-6">
-                                    <li>Fly into Nice (NCE)</li>
-                                    <li>Grab a rental car and head to the Chateau or your nearby accommodation</li>
-                                </ul>
-                            </div>
+                    <div class="collapsible-section">
+                        <button class="collapsible-header flex items-center gap-2">
+                            <span class="material-symbols-outlined">flight_takeoff</span>
+                            <p class="font-bold">Coming from the US?</p>
+                            <span class="material-symbols-outlined ml-auto transition-transform">expand_more</span>
+                        </button>
+                        <div class="collapsible-content">
+                            <div class="flex flex-col gap-6">
+                                <div>
+                                    <p class="font-bold mb-2">Option 1: Fly into Nice</p>
+                                    <ul class="list-disc ml-6">
+                                        <li>Fly into Nice (NCE)</li>
+                                        <li>Grab a rental car and head to the Chateau or your nearby accommodation</li>
+                                    </ul>
+                                </div>
 
-                            <div>
-                                <p class="font-bold mb-2">Option 2: Fly into Paris (CDG)</p>
-                                <ul class="list-disc ml-6">
-                                    <li>Fly into Paris (CDG)</li>
-                                    <li>Take the RER B train to Paris Gare du Nord, then transfer to Paris Gare de Lyon using RER D or Metro line 4</li>
-                                    <li>Book a high-speed TGV train from Paris Gare de Lyon to Cannes. The journey typically takes around 5 to 6 hours (but is beautiful)</li>
-                                    <li>Grab a rental car and head to the Château or your nearby accommodation</li>
-                                </ul>
-                            </div>
+                                <div>
+                                    <p class="font-bold mb-2">Option 2: Fly into Paris (CDG)</p>
+                                    <ul class="list-disc ml-6">
+                                        <li>Fly into Paris (CDG)</li>
+                                        <li>Take the RER B train to Paris Gare du Nord, then transfer to Paris Gare de Lyon using RER D or Metro line 4</li>
+                                        <li>Book a high-speed TGV train from Paris Gare de Lyon to Cannes. The journey typically takes around 5 to 6 hours (but is beautiful)</li>
+                                        <li>Grab a rental car and head to the Château or your nearby accommodation</li>
+                                    </ul>
+                                </div>
 
-                            <div>
-                                <p class="font-bold mb-2">Option 3: Fly into Paris (ORY)</p>
-                                <ul class="list-disc ml-6">
-                                    <li>Fly into Paris (ORY)</li>
-                                    <li>Take the Orlyval train to Antony, then transfer to RER B to Paris Gare du Nord, and proceed to Gare de Lyon.</li>
-                                    <li>Book a high-speed TGV train from Paris Gare de Lyon to Cannes. The journey typically takes around 5 to 6 hours (but is beautiful)</li>
-                                    <li>Grab a rental car and head to the Château or your nearby accommodation</li>
-                                </ul>
+                                <div>
+                                    <p class="font-bold mb-2">Option 3: Fly into Paris (ORY)</p>
+                                    <ul class="list-disc ml-6">
+                                        <li>Fly into Paris (ORY)</li>
+                                        <li>Take the Orlyval train to Antony, then transfer to RER B to Paris Gare du Nord, and proceed to Gare de Lyon.</li>
+                                        <li>Book a high-speed TGV train from Paris Gare de Lyon to Cannes. The journey typically takes around 5 to 6 hours (but is beautiful)</li>
+                                        <li>Grab a rental car and head to the Château or your nearby accommodation</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col items-center gap-16">
-                <h3 class="font-cursive md:text-3xl">Things to Do</h3>
+            <div id="things-to-do" class="flex flex-col items-center gap-16">
+                <h3 class="font-cursive text-2xl md:text-4xl">Things to Do</h3>
                 <p class="text-base">TBC</p>
             </div>
         </div>
     </section>
 
-    <section id="faq" class="min-h-screen w-full py-56">
-        <h2 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+    <section id="faq" class="min-h-screen w-full items-center">
+        <h2 class="font-nats uppercase self-center text-4xl md:text-8xl z-10 mb-8 text-center">Frequently Asked Questions</h2>
     </section>
     
     <script type="module" src="./main.js"></script>
