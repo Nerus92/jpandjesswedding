@@ -102,7 +102,7 @@ a.selected {
     transition: all 0.3s ease-in-out;
 }
 
-#our-story img:hover {
+#our-story img:hover :not(no-hover-zoom) {
     transform: scale(1.27);
 }
 
