@@ -554,6 +554,40 @@ video {
   display: none;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .visible {
   visibility: visible;
 }
@@ -580,6 +614,10 @@ video {
 
 .-left-8 {
   left: -2rem;
+}
+
+.-left-\[5rem\] {
+  left: -5rem;
 }
 
 .-top-16 {
@@ -614,6 +652,10 @@ video {
   right: 0px;
 }
 
+.right-20 {
+  right: 5rem;
+}
+
 .top-0 {
   top: 0px;
 }
@@ -638,8 +680,8 @@ video {
   top: 200rem;
 }
 
-.top-\[40rem\] {
-  top: 40rem;
+.top-\[45rem\] {
+  top: 45rem;
 }
 
 .top-\[80rem\] {
@@ -711,10 +753,6 @@ video {
   margin-left: 1.5rem;
 }
 
-.ml-auto {
-  margin-left: auto;
-}
-
 .mt-12 {
   margin-top: 3rem;
 }
@@ -725,6 +763,10 @@ video {
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mt-24 {
+  margin-top: 6rem;
 }
 
 .mt-32 {
@@ -787,12 +829,12 @@ video {
   max-height: 14rem;
 }
 
-.min-h-screen {
-  min-height: 100vh;
+.min-h-\[200px\] {
+  min-height: 200px;
 }
 
-.w-16 {
-  width: 4rem;
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-2\/3 {
@@ -811,6 +853,18 @@ video {
   width: 2rem;
 }
 
+.w-\[32rem\] {
+  width: 32rem;
+}
+
+.w-\[55rem\] {
+  width: 55rem;
+}
+
+.w-\[60rem\] {
+  width: 60rem;
+}
+
 .w-full {
   width: 100%;
 }
@@ -827,8 +881,16 @@ video {
   max-width: 7rem;
 }
 
+.max-w-\[60\%\] {
+  max-width: 60%;
+}
+
 .max-w-\[80\%\] {
   max-width: 80%;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
 }
 
 .origin-top {
@@ -842,12 +904,6 @@ video {
 
 .-translate-y-full {
   --tw-translate-y: -100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.scale-125 {
-  --tw-scale-x: 1.25;
-  --tw-scale-y: 1.25;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -931,6 +987,14 @@ video {
   align-self: center;
 }
 
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
 .overflow-x-hidden {
   overflow-x: hidden;
 }
@@ -974,6 +1038,10 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-opacity-5 {
+  --tw-bg-opacity: 0.05;
+}
+
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -1009,6 +1077,15 @@ video {
   padding: 1rem;
 }
 
+.p-6 {
+  padding: 1.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -1022,6 +1099,11 @@ video {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .py-4 {
@@ -1039,6 +1121,10 @@ video {
 
 .pt-\[40\%\] {
   padding-top: 40%;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .text-center {
@@ -1145,12 +1231,6 @@ video {
 
 .transition-all {
   transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.transition-transform {
-  transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1304,6 +1384,21 @@ a.selected {
   animation: open-menu 0.5s ease-in-out forwards;
 }
 
+.top-bottom-gradient {
+  -webkit-mask-image: linear-gradient(to bottom, 
+        rgba(0,0,0,0), 
+        rgba(0,0,0,1) 15%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0)
+    );
+          mask-image: linear-gradient(to bottom, 
+        rgba(0,0,0,0), 
+        rgba(0,0,0,1) 15%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0)
+    );
+}
+
 .bottom-gradient {
   -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,1) 10%);
           mask-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,1) 10%);
@@ -1380,6 +1475,165 @@ a.selected {
 
 [id] {
   scroll-margin-top: 18rem;
+}
+
+/* Tab Navigation Styles */
+
+.tab-navigation {
+  min-width: 200px;
+}
+
+.tab-button {
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 1.25rem;
+}
+
+.tab-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.tab-button.active {
+  background: rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+}
+
+.tab-content {
+  min-height: 300px;
+  width: 100%;
+  padding: 1.25rem;
+}
+
+.tab-panel {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.tab-panel.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* For mobile scrolling tabs */
+
+@media (max-width: 768px) {
+  .tab-navigation {
+    padding-bottom: 4px;
+  }
+
+  .tab-navigation::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .tab-navigation::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+
+  .tab-navigation::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+  }
+}
+
+/* FAQ Tab Styles */
+
+.faq-tabs {
+  min-width: 300px;
+  max-width: 400px;
+  max-height: 400px;
+  padding-right: 0.5rem;
+}
+
+.faq-tabs .tab-button {
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .faq-tabs {
+    max-width: 100%;
+    max-height: none;
+  }
+}
+
+/* Adjust spacing for FAQ sections */
+
+#faq h3.font-cursive {
+  margin-bottom: 2rem;
+}
+
+/* Add more space between FAQ subsections */
+
+#faq .flex.flex-col.gap-8 {
+  margin-bottom: 4rem;
+  /* Increase bottom margin to prevent overlap */
+}
+
+/* Make the last subsection not have extra margin */
+
+#faq .flex.flex-col.gap-8:last-child {
+  margin-bottom: 0;
+}
+
+/* Update nav indicator styles */
+
+#nav-indicator {
+  transition: opacity 0.3s ease, width 0.3s ease, left 0.3s ease;
+  opacity: 0;
+  /* Start hidden */
+  display: block;
+  /* Make sure it's displayed */
+}
+
+/* FAQ Category Tabs */
+
+.faq-category-tabs {
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.category-tab {
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.category-tab.active {
+  border-bottom: 2px solid white;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.category-panel {
+  display: none;
+}
+
+.category-panel.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+@media (max-width: 768px) {
+  .faq-category-tabs {
+    justify-content: flex-start;
+    padding-bottom: 0.5rem;
+  }
+
+  .category-tab {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
 }
 
 .before\:absolute::before {
@@ -1547,16 +1801,12 @@ a.selected {
     margin-top: 8rem;
   }
 
-  .md\:mt-8 {
-    margin-top: 2rem;
-  }
-
-  .md\:mt-\[40rem\] {
-    margin-top: 40rem;
-  }
-
   .md\:mt-\[50rem\] {
     margin-top: 50rem;
+  }
+
+  .md\:mt-\[5rem\] {
+    margin-top: 5rem;
   }
 
   .md\:flex {
@@ -1611,12 +1861,20 @@ a.selected {
     flex-direction: row;
   }
 
+  .md\:flex-col {
+    flex-direction: column;
+  }
+
   .md\:items-start {
     align-items: flex-start;
   }
 
   .md\:gap-16 {
     gap: 4rem;
+  }
+
+  .md\:overflow-visible {
+    overflow: visible;
   }
 
   .md\:pt-56 {

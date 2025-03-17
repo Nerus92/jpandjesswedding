@@ -23,11 +23,35 @@ updateCountdown();
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('#navbar a');
 const indicator = document.querySelector('#nav-indicator');
+// Make sure the indicator exists but is initially hidden
+if (indicator) {
+    indicator.style.opacity = '0';
+}
 const updateActiveLink = () => {
+    const scrollPosition = window.scrollY;
+    // Get the Theme section position
+    const themeSection = document.getElementById('theme');
+    const themeSectionTop = themeSection ? themeSection.offsetTop : 1000;
+    // If we're above the Theme section, hide the indicator and remove all selections
+    if (scrollPosition < themeSectionTop - 300) {
+        // Remove active class from all links
+        navLinks.forEach(link => {
+            link.classList.remove('selected');
+        });
+        // Hide the indicator
+        if (indicator) {
+            indicator.style.opacity = '0';
+        }
+        return;
+    }
+    // Show the indicator when scrolling past the Theme section
+    if (indicator) {
+        indicator.style.opacity = '1';
+    }
+    // Continue with the existing logic for other scroll positions
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        const scrollPosition = window.scrollY;
         if (scrollPosition >= sectionTop - sectionHeight / 2 &&
             scrollPosition < sectionTop + sectionHeight / 2) {
             // Add active class to current section's link
@@ -110,3 +134,49 @@ document.querySelectorAll('.collapsible-header').forEach(button => {
     });
 });
 document.addEventListener('DOMContentLoaded', initApp);
+// Tab functionality for all tab sections
+document.addEventListener('DOMContentLoaded', () => {
+    // Get all tab navigation containers
+    const tabContainers = document.querySelectorAll('.tab-navigation');
+    tabContainers.forEach(container => {
+        const tabButtons = container.querySelectorAll('.tab-button');
+        const tabContent = container.nextElementSibling;
+        if (!tabContent || !tabContent.classList.contains('tab-content')) {
+            return; // Skip if no matching tab content found
+        }
+        const tabPanels = tabContent.querySelectorAll('.tab-panel');
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and panels in this container
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabPanels.forEach(panel => panel.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                // Get the tab ID and activate corresponding panel
+                const tabId = button.getAttribute('data-tab');
+                const panel = document.getElementById(`${tabId}-panel`);
+                panel?.classList.add('active');
+            });
+        });
+    });
+});
+// Category tab functionality for FAQ section
+document.addEventListener('DOMContentLoaded', () => {
+    // Handle category tabs
+    const categoryTabs = document.querySelectorAll('.category-tab');
+    const categoryPanels = document.querySelectorAll('.category-panel');
+    categoryTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Remove active class from all category tabs and panels
+            categoryTabs.forEach(t => t.classList.remove('active'));
+            categoryPanels.forEach(p => p.classList.remove('active'));
+            // Add active class to clicked tab
+            tab.classList.add('active');
+            // Get the category ID and activate corresponding panel
+            const categoryId = tab.getAttribute('data-category');
+            const panel = document.getElementById(`${categoryId}-panel`);
+            panel?.classList.add('active');
+        });
+    });
+    // The existing tab functionality will handle the question tabs within each category
+});
