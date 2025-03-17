@@ -130,6 +130,15 @@ a.selected {
     }
 }
 
+.top-bottom-gradient {
+    mask-image: linear-gradient(to bottom, 
+        rgba(0,0,0,0), 
+        rgba(0,0,0,1) 15%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0)
+    );
+}
+
 .bottom-gradient {
     mask-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,1) 10%);
 }
@@ -203,4 +212,147 @@ a.selected {
 
 [id] {
     scroll-margin-top: 18rem;
+}
+
+/* Tab Navigation Styles */
+.tab-navigation {
+    min-width: 200px;
+}
+
+.tab-button {
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.75rem 1.25rem;
+}
+
+.tab-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.tab-button.active {
+    background: rgba(255, 255, 255, 0.3);
+    font-weight: bold;
+}
+
+.tab-content {
+    min-height: 300px;
+    width: 100%;
+    padding: 1.25rem;
+}
+
+.tab-panel {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.tab-panel.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* For mobile scrolling tabs */
+@media (max-width: 768px) {
+    .tab-navigation {
+        padding-bottom: 4px;
+    }
+    
+    .tab-navigation::-webkit-scrollbar {
+        height: 4px;
+    }
+    
+    .tab-navigation::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+    }
+    
+    .tab-navigation::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+    }
+}
+
+/* FAQ Tab Styles */
+.faq-tabs {
+    min-width: 300px;
+    max-width: 400px;
+    max-height: 400px;
+    padding-right: 0.5rem;
+}
+
+.faq-tabs .tab-button {
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .faq-tabs {
+        max-width: 100%;
+        max-height: none;
+    }
+}
+
+/* Adjust spacing for FAQ sections */
+#faq h3.font-cursive {
+    margin-bottom: 2rem;
+}
+
+/* Add more space between FAQ subsections */
+#faq .flex.flex-col.gap-8 {
+    margin-bottom: 4rem; /* Increase bottom margin to prevent overlap */
+}
+
+/* Make the last subsection not have extra margin */
+#faq .flex.flex-col.gap-8:last-child {
+    margin-bottom: 0;
+}
+
+/* Update nav indicator styles */
+#nav-indicator {
+    transition: opacity 0.3s ease, width 0.3s ease, left 0.3s ease;
+    opacity: 0; /* Start hidden */
+    display: block; /* Make sure it's displayed */
+}
+
+/* FAQ Category Tabs */
+.faq-category-tabs {
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+.category-tab {
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.category-tab.active {
+    border-bottom: 2px solid white;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.category-panel {
+    display: none;
+}
+
+.category-panel.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@media (max-width: 768px) {
+    .faq-category-tabs {
+        justify-content: flex-start;
+        padding-bottom: 0.5rem;
+    }
+    
+    .category-tab {
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
 }
