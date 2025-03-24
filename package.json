@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && tailwindcss -i ./src/styles.css -o ./dist/styles.css && npm run copy-assets",
+    "optimize-images": "mkdir -p dist/assets && sharp --input \"src/assets/**/*.{jpg,png}\" --output dist/assets --format webp && imagemin dist/assets/**/*.{jpg,png,webp} --out-dir dist/assets",
+    "build": "npm run optimize-images && tsc && tailwindcss -i ./src/styles.css -o ./dist/styles.css && npm run copy-assets",
     "watch": "concurrently \"tsc --watch\" \"tailwindcss -i ./src/styles.css -o ./dist/styles.css --watch\" \"nodemon --watch src --ext html --exec 'npm run copy-assets'\"",
     "dev": "concurrently \"npm run watch\" \"live-server --port=3000 dist/\"",
-    "copy-assets": "copyfiles -u 1 \"src/**/*.html\" src/assets/* dist/"
+    "copy-assets": "copyfiles -u 1 \"src/**/*.html\" dist/"
   },
   "keywords": [],
   "author": "",
@@ -17,9 +18,11 @@
     "autoprefixer": "^10.4.20",
     "concurrently": "^9.0.1",
     "copyfiles": "^2.4.1",
+    "imagemin-cli": "^8.0.0",
     "live-server": "^1.2.2",
     "nodemon": "^3.1.7",
     "postcss": "^8.4.47",
+    "sharp-cli": "^5.1.0",
     "tailwindcss": "^3.4.14",
     "typescript": "^5.6.3"
   }
