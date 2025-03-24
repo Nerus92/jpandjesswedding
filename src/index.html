@@ -77,31 +77,42 @@
             </div>
         </div>
         
-        <img
-            src="./assets/jsquared_no_bkgd.png" 
-            alt="Couple" 
-            class="absolute bottom-0 right-20 object-cover z-10 opacity-50 md:opacity-100 w-[32rem]"
-        >
-        <img 
-            src="./assets/nebula-bg.png" 
-            alt="nebula" 
-            class="absolute bottom-0 right-0 z-0 w-[55rem]"
-        >
+        <picture class="absolute bottom-0 right-20 object-cover z-10 opacity-50 md:opacity-100">
+            <source srcset="./assets/jsquared_no_bkgd.webp" type="image/webp">
+            <img
+                src="./assets/jsquared_no_bkgd.png" 
+                alt="Couple" 
+                class="w-[32rem]"
+            >
+        </picture>
+        
+        <picture class="absolute bottom-0 right-0 z-0">
+            <source srcset="./assets/nebula-bg.webp" type="image/webp">
+            <img 
+                src="./assets/nebula-bg.png" 
+                alt="nebula" 
+                class="w-[55rem]"
+            >
+        </picture>
 
-        <img 
-            src="./assets/trail_1.png" 
-            alt="trail" 
-            class="self-center no-hover-zoom mt-60"
-        >
+        <picture class="self-center no-hover-zoom mt-60">
+            <source srcset="./assets/trail_1.webp" type="image/webp">
+            <img 
+                src="./assets/trail_1.png" 
+                alt="trail" 
+            >
+        </picture>
 
     </section>
 
     <section id="theme" class="min-h-screen w-full mt-16 md:mt-[5rem] flex flex-col items-center gap-8">
-        <img 
-            src="./assets/nebula_2.png" 
-            alt="nebula" 
-            class="absolute top-[80rem]"
-        >
+        <picture class="absolute top-[80rem]">
+            <source srcset="./assets/nebula_2.webp" type="image/webp">
+            <img 
+                src="./assets/nebula_2.png" 
+                alt="nebula" 
+            >
+        </picture>
         <h2 class="font-nats uppercase text-4xl md:text-8xl text-center align-baseline">We are all <span class="font-cursive lowercase align-baseline">stardust</span></h2>
         <h3 class="font-cursive self-center text-2xl md:text-4xl text-center">One part science. One part magic.</h3>
         <div class="text-center px-8 md:max-w-[66%] mt-8">
@@ -124,17 +135,21 @@
         </div>
     </section>
 
-    <img 
-        src="./assets/jsquared_sunset.jpg" 
-        alt="Couple Sunset" 
-        class="w-full mt-24"
-    >
+    <picture class="w-full mt-24">
+        <source srcset="./assets/jsquared_sunset.webp" type="image/webp">
+        <img 
+            src="./assets/jsquared_sunset.jpg" 
+            alt="Couple Sunset" 
+        >
+    </picture>
 
-    <img 
-        src="./assets/trail_2.png" 
-        alt="trail" 
-        class="self-center mt-60"
-    >
+    <picture class="self-center mt-60">
+        <source srcset="./assets/trail_2.webp" type="image/webp">
+        <img 
+            src="./assets/trail_2.png" 
+            alt="trail" 
+        >
+    </picture>
 
     <section id="wedding-party" class="relative min-h-screen w-full mt-16 flex flex-col items-center gap-8">
         <h2 class="font-nats uppercase self-center text-4xl md:text-8xl z-10">Meet the Wedding Party</h2>
@@ -148,11 +163,14 @@
                 <div class="wedding-party-member-role uppercase text-md text-center md:text-right">
                     Matron of Honor
                 </div>
-                <img
-                    src="./assets/leo.png" 
-                    alt="leo"
-                    class="w-56 max-h-56 p-4 m-auto"
-                >
+                <picture class="p-4 m-auto">
+                    <source srcset="./assets/leo.webp" type="image/webp">
+                    <img
+                        src="./assets/leo.png" 
+                        alt="leo"
+                        class="w-56 max-h-56"
+                    >
+                </picture>
                 <div class="wedding-party-member-description mx-auto text-center max-w-[80%] md:text-left md:row-span-3 align-text-top">
                     Brooklynn and Jess first met working in catering & special events at Kings Island about 10 years ago, working through all hours of the day and night to deliver events that were both beautiful and incredibly fun. Their connection was instant, and they quickly became inseparable. From spontaneous road trips to deep late-night conversations, Brooklynn has been a Jess's best friend and confidante. Brooklynn's infectious laughter and unwavering support have been a constant source of joy.
                 </div>
@@ -164,11 +182,14 @@
                 <div class="wedding-party-member-role uppercase text-md text-center md:text-right">
                     Best Man
                 </div>
-                <img
-                    src="./assets/gemini.png" 
-                    alt="gemini"
-                    class="w-56 max-h-56 p-4 m-auto"
-                >
+                <picture class="p-4 m-auto">
+                    <source srcset="./assets/gemini.webp" type="image/webp">
+                    <img
+                        src="./assets/gemini.png" 
+                        alt="gemini"
+                        class="w-56 max-h-56"
+                    >
+                </picture>
                 <div class="wedding-party-member-description mx-auto text-center max-w-[80%] md:text-left md:row-span-3 align-text-top">
                     JP has known JB for as long as he has been alive. And yes, JP is younger, but he is also taller. From the countryside to the city they grew together helping each other, though the process required one of them to break his leg and the other to lose money to a train station scam. Live and learn.
                 </div>
@@ -180,11 +201,13 @@
                 <div class="wedding-party-member-role uppercase text-md text-center md:text-right">
                     Bridesmaid
                 </div>
-                <img
-                    src="./assets/pisces.png" 
-                    alt="pisces"
-                    class="w-56 max-h-56 p-4 m-auto"
-                >
+                <picture class="w-56 max-h-56 p-4 m-auto">
+                    <source srcset="./assets/pisces.webp" type="image/webp">
+                    <img
+                        src="./assets/pisces.png" 
+                        alt="pisces"
+                    >
+                </picture>
                 <div class="wedding-party-member-description mx-auto text-center max-w-[80%] md:text-left md:row-span-3 align-text-top">
                     Lauren is not only Jess's sister but also one of her favorite people in the world. Their relationship has been a cornerstone of the Jess's life, marked by cherished traditions and an obscene number of Insta Reels they send each other at all hours of the day or spending HOURS running dungeons on Elder Scrolls Online. Lauren's humor and wit, coupled with her incredible empathy and strength, has made her an irreplaceable part of Jess's life.
                 </div>
@@ -196,11 +219,14 @@
                 <div class="wedding-party-member-role uppercase text-md text-center md:text-right">
                     Groomsman
                 </div>
-                <img
-                    src="./assets/scorpio.png" 
-                    alt="scorpio"
-                    class="w-56 max-h-56 p-4 m-auto"
-                >
+                <picture class="p-4 m-auto">
+                    <source srcset="./assets/scorpio.webp" type="image/webp">
+                    <img
+                        src="./assets/scorpio.png" 
+                        alt="scorpio"
+                        class="w-56 max-h-56"
+                    >
+                </picture>
                 <div class="wedding-party-member-description mx-auto text-center max-w-[80%] md:text-left md:row-span-3 align-text-top">
                     Luc and JP shared a childhood, "sharing" being the key word - their parents don't remember any time where they fought for toys. They also shared in many activities growing up: violin, capoeira, rowing, wrestling with JB... Now separated by an ocean they still connect through their shared interests in games, programming, and the weirdness of life and society.
                 </div>
@@ -212,11 +238,14 @@
                 <div class="wedding-party-member-role uppercase text-md text-center md:text-right">
                     Bridesmaid
                 </div>
-                <img
-                    src="./assets/taurus.png" 
-                    alt="taurus"
-                    class="w-56 max-h-56 p-4 m-auto"
-                >
+                <picture class="p-4 m-auto">
+                    <source srcset="./assets/taurus.webp" type="image/webp">
+                    <img
+                        src="./assets/taurus.png" 
+                        alt="taurus"
+                        class="w-56 max-h-56"
+                    >
+                </picture>
                 <div class="wedding-party-member-description mx-auto text-center max-w-[80%] md:text-left md:row-span-3 align-text-top">
                     Ashley is one of Jess's very first friends. Growing up across the street from each other, these two have a bond that few others share -- they are true childhood friends. From playing Barbies & Polly Pockets to running through sprinklers and other neighborhood shenanigans, Ashley has been a consistent voice of love and support throughout many phases of their lives.
                 </div>
@@ -228,11 +257,14 @@
                 <div class="wedding-party-member-role uppercase text-md text-center md:text-right">
                     Groomsman
                 </div>
-                <img
-                    src="./assets/aquarius.png" 
-                    alt="aquarius"
-                    class="w-56 max-h-56 p-4 m-auto"
-                >
+                <picture class="p-4 m-auto">
+                    <source srcset="./assets/aquarius.webp" type="image/webp">
+                    <img
+                        src="./assets/aquarius.png" 
+                        alt="aquarius"
+                        class="w-56 max-h-56"
+                    >
+                </picture>
                 <div class="wedding-party-member-description mx-auto text-center max-w-[80%] md:text-left md:row-span-3 align-text-top">
                     Matt and JP first met as strangers in the Aldebaran Atelier in Paris and nerded out over robot User Experience. Jump forward about a year in the San Francisco office kitchen, and as JP gets his cereal he hears an Australian accent: "excuse me but, have we met?" From SF to Paris to Boston to Tokyo, they kept nerding out and imagining the future.
                 </div>
@@ -244,11 +276,14 @@
                 <div class="wedding-party-member-role uppercase text-md text-center md:text-right">
                     Bridesmaid
                 </div>
-                <img
-                    src="./assets/aquarius.png" 
-                    alt="aquarius"
-                    class="w-56 max-h-56 p-4 m-auto"
-                >
+                <picture class="p-4 m-auto">
+                    <source srcset="./assets/aquarius.webp" type="image/webp">
+                    <img
+                        src="./assets/aquarius.png" 
+                        alt="aquarius"
+                        class="w-56 max-h-56"
+                    >
+                </picture>
                 <div class="wedding-party-member-description mx-auto text-center max-w-[80%] md:text-left md:row-span-3 align-text-top">
                     Kyla and Jess first crossed paths in high school, but it was during college that their friendship truly blossomed. With a shared love for music, their connection deepened as they bonded over their favorite tunes and concerts. Kyla's enthusiasm and musical talent have always been a source of inspiration for Jess. Kyla's vibrant energy and thoughtful support have made her a cherished friend. Her presence adds a special note (ba dum tss) to this celebration, and Jess is thrilled to have her as a bridesmaid.
                 </div>
@@ -260,59 +295,76 @@
                 <div class="wedding-party-member-role uppercase text-md text-center md:text-right">
                     Groomsman
                 </div>
-                <img
-                    src="./assets/libra.png" 
-                    alt="libra"
-                    class="w-56 max-h-56 p-4 m-auto"
-                >
+                <picture class="p-4 m-auto">
+                    <source srcset="./assets/libra.webp" type="image/webp">
+                    <img
+                        src="./assets/libra.png" 
+                        alt="libra"
+                        class="w-56 max-h-56"
+                    >
+                </picture>
                 <div class="wedding-party-member-description mx-auto text-center max-w-[80%] md:text-left md:row-span-3 align-text-top">
                     Nicolas is the reason JP now prefers working on MacOS, it only took a couple of years of convincing. More importantly, Nicolas and JP have been colleagues and friends for 10 years, and took the jump over the ocean and toward the US together.
                 </div>
             </div>
         </div>
 
-        <img 
-            src="./assets/nebula_1.png" 
-            alt="nebula" 
-            class="absolute -top-16 left-8 md:-top-96 md:left-32"
-        >
+        <picture class="absolute -top-16 left-8 md:-top-96 md:left-32">
+            <source srcset="./assets/nebula_1.webp" type="image/webp">
+            <img 
+                src="./assets/nebula_1.png" 
+                alt="nebula" 
+            >
+        </picture>
 
-        <img 
-            src="./assets/nebula_3.png" 
-            alt="nebula" 
-            class="absolute top-[45rem] -left-[5rem]"
-        >
+        <picture class="absolute top-[45rem] -left-[5rem]">
+            <source srcset="./assets/nebula_3.webp" type="image/webp">
+            <img 
+                src="./assets/nebula_3.png" 
+                alt="nebula" 
+            >
+        </picture>
 
-        <img 
-            src="./assets/nebula_2.png" 
-            alt="nebula" 
-            class="absolute top-[80rem] md:hidden"
-        >
+        <picture class="absolute top-[80rem] md:hidden">
+            <source srcset="./assets/nebula_2.webp" type="image/webp">
+            <img 
+                src="./assets/nebula_2.png" 
+                alt="nebula" 
+            >
+        </picture>
 
-        <img 
-            src="./assets/nebula_4.png" 
-            alt="nebula" 
-            class="absolute top-[120rem] md:hidden"
-        >
+        <picture class="absolute top-[120rem] md:hidden">
+            <source srcset="./assets/nebula_4.webp" type="image/webp">
+            <img 
+                src="./assets/nebula_4.png" 
+                alt="nebula" 
+            >
+        </picture>
 
-        <img 
-            src="./assets/nebula_5.png" 
-            alt="nebula" 
-            class="absolute top-[160rem] md:hidden"
-        >
+        <picture class="absolute top-[160rem] md:hidden">
+            <source srcset="./assets/nebula_5.webp" type="image/webp">
+            <img 
+                src="./assets/nebula_5.png" 
+                alt="nebula" 
+            >
+        </picture>
 
-        <img 
-            src="./assets/nebula_6.png" 
-            alt="nebula" 
-            class="absolute top-[200rem] md:hidden"
-        >
+        <picture class="absolute top-[200rem] md:hidden">
+            <source srcset="./assets/nebula_6.webp" type="image/webp">
+            <img 
+                src="./assets/nebula_6.png" 
+                alt="nebula" 
+            >
+        </picture>
     </section>
 
-    <img 
-        src="./assets/trail_3.png" 
-        alt="trail" 
-        class="self-center mt-12"
-    >
+    <picture class="self-center mt-12">
+        <source srcset="./assets/trail_3.webp" type="image/webp">
+        <img 
+            src="./assets/trail_3.png" 
+            alt="trail" 
+        >
+    </picture>
 
     <section id="venue" class="relative min-h-screen w-full mt-16 flex flex-col gap-8 items-center">
         <h2 class="font-nats uppercase self-center text-4xl md:text-8xl z-10">Explore the Venue</h2>
@@ -329,24 +381,32 @@
         <p class="text-center mt-6 text-base max-w-[80%] md:max-w-[60%]">
             Perched above the endless blue of the Mediterranean, Château de la Napoule feels like a bridge between worlds: past and future, seen and unseen. It's more than our wedding venue; it's a place that mirrors the extraordinary chance of our own story. Here, surrounded by timeless beauty and infinite possibility, we will celebrate the miracle of this moment—of two paths converging, under the same stars.
         </p>
-        <img 
-            src="./assets/napoule_plan.png" 
-            alt="napoule plan" 
-            class="mt-32 max-w-[80%] md:max-w-[50%]"
-        >
-        <img 
-            src="./assets/napoule.png" 
-            alt="napoule" 
-            class="absolute w-full top-40 md:-top-80 bottom-gradient"
-        >
+        <picture class="mt-32 max-w-[80%] md:max-w-[50%]">
+            <source srcset="./assets/napoule_plan.webp" type="image/webp">
+            <img 
+                src="./assets/napoule_plan.png" 
+                alt="napoule plan" 
+                class="w-full"
+            >
+        </picture>
+        <picture class="absolute top-40 md:-top-80 w-full">
+            <source srcset="./assets/napoule.webp" type="image/webp">
+            <img 
+                src="./assets/napoule.png" 
+                alt="napoule" 
+                class="w-full bottom-gradient"
+            >
+        </picture>
     </section>
 
     <section id="schedule" class="min-h-screen w-full items-center mt-16">
-        <img 
-            src="./assets/nebula_5.png" 
-            alt="nebula" 
-            class="absolute top-[700rem] left-[40rem]"
-        >
+        <picture class="absolute top-[700rem] left-[40rem]">
+            <source srcset="./assets/nebula_5.webp" type="image/webp">
+            <img 
+                src="./assets/nebula_5.png" 
+                alt="nebula" 
+            >
+        </picture>
         <h2 class="font-nats uppercase self-center text-4xl md:text-8xl z-10 mb-8 text-center">Schedule</h2>
         <p class="text-base text-center">TBC</p>
     </section>
@@ -366,35 +426,47 @@
                 </div>
                 <div class="flex flex-row gap-8">
                     <div class="flex flex-col items-center gap-4">
-                        <img 
-                            src="./assets/attire_black.png" 
-                            alt="Black Attire" 
-                            class=""
-                        >
+                        <picture>
+                            <source srcset="./assets/attire_black.webp" type="image/webp">
+                            <img 
+                                src="./assets/attire_black.png" 
+                                alt="Black Attire" 
+                                class=""
+                            >
+                        </picture>
                         <p>black</p>
                     </div>
                     <div class="flex flex-col items-center gap-4">
-                        <img 
-                            src="./assets/attire_navy.png" 
-                            alt="Navy Attire" 
-                            class=""
-                        >
+                        <picture>
+                            <source srcset="./assets/attire_navy.webp" type="image/webp">
+                            <img 
+                                src="./assets/attire_navy.png" 
+                                alt="Navy Attire" 
+                                class=""
+                            >
+                        </picture>
                         <p>navy</p>
                     </div>
                     <div class="flex flex-col items-center gap-4">
-                        <img 
-                            src="./assets/attire_purple.png" 
-                            alt="Purple Attire" 
-                            class=""
-                        >
+                        <picture>
+                            <source srcset="./assets/attire_purple.webp" type="image/webp">
+                            <img 
+                                src="./assets/attire_purple.png" 
+                                alt="Purple Attire" 
+                                class=""
+                            >
+                        </picture>
                         <p>purple</p>
                     </div>
                     <div class="flex flex-col items-center gap-4">
-                        <img 
-                            src="./assets/attire_pink.png" 
-                            alt="Pink Attire" 
-                            class=""
-                        >
+                        <picture>
+                            <source srcset="./assets/attire_pink.webp" type="image/webp">
+                            <img 
+                                src="./assets/attire_pink.png" 
+                                alt="Pink Attire" 
+                                class=""
+                            >
+                        </picture>
                         <p>pink</p>
                     </div>
                 </div>
@@ -493,22 +565,27 @@
                 </div>
             </div>
             <div id="things-to-do" class="flex flex-col items-center gap-16">
-                <img 
-                    src="./assets/nebula_6.png" 
-                    alt="nebula" 
-                    class="absolute top-[850rem] z-0"
-                >
+                <picture class="absolute top-[825rem]">
+                    <source srcset="./assets/nebula_6.webp" type="image/webp">
+                    <img 
+                        src="./assets/nebula_6.png" 
+                        alt="nebula" 
+                    >
+                </picture>
                 <h3 class="font-cursive text-2xl md:text-4xl">Things to Do</h3>
                 <p class="text-base">TBC</p>
             </div>
         </div>
     </section>
 
-    <img 
-        src="./assets/jsquared_b&w.jpg" 
-        alt="Couple Sunset" 
-        class="w-full h-[45rem] object-cover object-bottom mt-96 mb-44"
-    >
+    <picture>
+        <source srcset="./assets/jsquared_b&w.webp" type="image/webp">
+        <img 
+            src="./assets/jsquared_b&w.jpg" 
+            alt="Couple Sunset" 
+            class="w-full h-[45rem] object-cover object-bottom mt-96 mb-44"
+        >
+    </picture>
 
     <section id="faq" class="min-h-screen w-full items-center">
         <h2 class="font-nats uppercase self-center text-4xl md:text-8xl z-10 mb-8 text-center">Frequently Asked Questions</h2>

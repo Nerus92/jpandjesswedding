@@ -9,7 +9,7 @@
     "build": "npm run optimize-images && tsc && tailwindcss -i ./src/styles.css -o ./dist/styles.css && npm run copy-assets",
     "watch": "concurrently \"tsc --watch\" \"tailwindcss -i ./src/styles.css -o ./dist/styles.css --watch\" \"nodemon --watch src --ext html --exec 'npm run copy-assets'\"",
     "dev": "concurrently \"npm run watch\" \"live-server --port=3000 dist/\"",
-    "copy-assets": "copyfiles -u 1 \"src/**/*.html\" dist/"
+    "copy-assets": "copyfiles -u 1 \"src/**/*.html\" \"src/assets/**/*\" dist/"
   },
   "keywords": [],
   "author": "",
