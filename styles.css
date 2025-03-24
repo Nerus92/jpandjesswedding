@@ -648,6 +648,10 @@ video {
   left: 2rem;
 }
 
+.left-\[40rem\] {
+  left: 40rem;
+}
+
 .right-0 {
   right: 0px;
 }
@@ -684,8 +688,16 @@ video {
   top: 45rem;
 }
 
+.top-\[700rem\] {
+  top: 700rem;
+}
+
 .top-\[80rem\] {
   top: 80rem;
+}
+
+.top-\[850rem\] {
+  top: 850rem;
 }
 
 .z-0 {
@@ -743,6 +755,10 @@ video {
 
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+
+.mb-44 {
+  margin-bottom: 11rem;
 }
 
 .mb-8 {
@@ -819,6 +835,10 @@ video {
 
 .h-8 {
   height: 2rem;
+}
+
+.h-\[45rem\] {
+  height: 45rem;
 }
 
 .h-full {
@@ -1067,6 +1087,11 @@ video {
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.object-bottom {
+  -o-object-position: bottom;
+     object-position: bottom;
 }
 
 .p-2 {
