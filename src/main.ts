@@ -120,7 +120,7 @@ const rsvpModal = document.getElementById('rsvp-modal');
 const waitButton = document.getElementById('wait-button');
 const readyButton = document.getElementById('ready-button');
 
-const RSVP_URL = 'https://jessica-and-jean-philippe.thatstheone.com/rsvp';
+const RSVP_URL = 'https://www.hitchd.com/jsquared2018';
 
 rsvpButtons?.forEach(button => {
     button?.addEventListener('click', (e) => {
